@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="mainimg/lioness.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="apple-touch-icon" href="/src/assets/imgs/Designericon.jpeg" />
+    <a rel="manifest" href="%PUBLIC_URL%/manifest.json" />   
+    <a rel="styles" href="/src/assets/main.css"/>
+    <title>Nala business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+    }
+    
+    const toggledark = document.documentElement.className === ('dark');
+    const toggleTheme = document.documentElement.className === ('theme');
+    const toggleLight = document.documentElement.className === ('light');
+    
+    const twoDark = ()=> {
+      toggledark.value = document.documentElement.classList.toggle('dark');
+      toggledark.value 
+      ? (localStorage.theme = 'light')
+      : (localStorage.theme = 'dark');
+    }; 
+    const twoLight = ()=> {
+      toggleLight.value = document.documentElement.classList.toggle('dark');
+      toggleLight.value 
+      ? (localStorage.theme = 'dark')
+      : (localStorage.theme = 'light');
+    }; 
+    const twoSystem = ()=> {
+      toggleTheme.value = document.documentElement.classList.toggle('theme');
+      toggleTheme.value 
+      ? (localStorage.theme = 'dark')
+      : (localStorage.theme = 'light');
+    }; 
+    </script> -->
+    <script>
+      // Initial theme check on page load
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+  
+      // Function to set the system theme
+      function setSystemTheme() {
+        localStorage.removeItem('theme'); // Remove theme preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+  
+      // Function to toggle between dark and light themes
+      function toggleTheme() {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+      }
+    </script>    
+    <div class="nextra-container main-container flex flex-col">
+      <script>
+        try {
+          if (localStorage.getItem("nextra-banner") === "0") {
+            document.body.classList.add("nextra-banner-hidden");
+          }
+        } catch (e) {}
+        </script> 
+     <div
+     class="nextra-nav-container z-20 sticky bg-transparent w-full top-0"
+     >
+       <div
+         class="nextra-nav-container-blur absolute w-full h-full bg-white dark:bg-dark pointer-events-none"
+       ></div>
+       <nav class="flex max-w-[90rem] mx-auto items-center left-0 right-0 h-16 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
+         <div class="w-full flex items-center mr-2">
+           <a class="no-underline text-current inline-flex items-center hover:opacity-75" href="/">
+             <img src="./mainimg/newlogo.jpeg" height="40" width="40" style="margin-right: 1em; border-radius: 10px;"/>
+             <h1 class="mr-4 hidden md:inline-block">
+               Nala Business & More
+               <span style="opacity: 0.2"></span>
+             </h1>
+           </a>
+         </div>
+         <div class="w-full"></div>
+         <a class="nextra-nav-a no-underline whitespace-nowrap mr-4 hidden md:inline-block active text-current" aria-selected="true" href="/"><svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.75432 0.819537C7.59742 0.726821 7.4025 0.726821 7.24559 0.819537L1.74559 4.06954C1.59336 4.15949 1.49996 4.32317 1.49996 4.5C1.49996 4.67683 1.59336 4.84051 1.74559 4.93046L7.24559 8.18046C7.4025 8.27318 7.59742 8.27318 7.75432 8.18046L13.2543 4.93046C13.4066 4.84051 13.5 4.67683 13.5 4.5C13.5 4.32317 13.4066 4.15949 13.2543 4.06954L7.75432 0.819537ZM7.49996 7.16923L2.9828 4.5L7.49996 1.83077L12.0171 4.5L7.49996 7.16923ZM1.5695 7.49564C1.70998 7.2579 2.01659 7.17906 2.25432 7.31954L7.49996 10.4192L12.7456 7.31954C12.9833 7.17906 13.2899 7.2579 13.4304 7.49564C13.5709 7.73337 13.4921 8.03998 13.2543 8.18046L7.75432 11.4305C7.59742 11.5232 7.4025 11.5232 7.24559 11.4305L1.74559 8.18046C1.50786 8.03998 1.42901 7.73337 1.5695 7.49564ZM1.56949 10.4956C1.70998 10.2579 2.01658 10.1791 2.25432 10.3195L7.49996 13.4192L12.7456 10.3195C12.9833 10.1791 13.2899 10.2579 13.4304 10.4956C13.5709 10.7334 13.4921 11.04 13.2543 11.1805L7.75432 14.4305C7.59742 14.5232 7.4025 14.5232 7.24559 14.4305L1.74559 11.1805C1.50785 11.04 1.42901 10.7334 1.56949 10.4956Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a>
+         <div class="flex-1">
+           <div class="hidden md:inline-block mr-2">
+             <div class="relative w-full nextra-search nextra-flexsearch md:w-64">
+              <!-- <div class="z-10 search-overlay"></div> -->
+               <div class="relative flex items-center">
+                 <input type="search" class="block w-full px-3 py-2 leading-tight rounded-lg appearance-none focus:outline-none focus:ring-1 focus:ring-gray-200 focus:bg-white hover:bg-opacity-5 transition-colors dark:focus:bg-dark dark:focus:ring-gray-100 dark:focus:ring-opacity-20 formulario btn" placeholder="Search documentation..." spellcheck="false" data-focus-visible-added>
+                 <!-- line below must be hidden when the first click is settled -->
+                 <ul class="HIDDENN Result absolute z-10 px-0 py-2.5 m-0 mt-2 top-full rounded-xl overflow-hidden overscroll-contain shadow-xl list-none">
+                  <span class="block p-5 text-center text-gray-400 text-sm select-none">No results found....</span>
+                 </ul> 
+                 <div class="hidden sm:flex absolute inset-y-0 right-0 py-1.5 pr-1.5 select-none pointer-events-none">
+                   <kbd class="inline-flex items-center px-2 font-mono text-sm font-medium bg-white dark:bg-dark dark:bg-opacity-50 text-gray-400 dark:text-gray-500 dark:border-gray-100 dark:border-opacity-20 border rounded">/</kbd>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <a class="text-current p-2" href="https://github.com/EarnMarket" target="_blank" rel="noreferrer"><svg height="24" viewBox="2 2 20 20" fill="none" aria-hidden="true">
+             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z" fill="currentColor"></path></svg>
+             <span class="sr-only">GitHub</span>
+         </a>
+         <button class="nextra-menu-icon block md:hidden p-2">
+           <svg fill="none" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" class="">
+             <g>
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+             </g>
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+             <g>
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+             </g>
+           </svg>
+         </button>
+         <div class="-mr-2"></div>  
+       </nav>
+     </div>
+     <div class="max-w-[90rem] w-full mx-auto">
+       <div class="flex flex-1 h-full">
+         <aside
+           class="nextra-sidebar-container nextra-scrollbar fixed flex-shrink-0 w-full md:w-64 md:sticky z-[15] top-16 self-start overflow-y-auto transform-none h-[calc(100vh-4rem)] md:block with-menu"
+         >
+           <div
+             class="nextra-sidebar select-none w-full h-full md:h-auto pl-[calc(env(safe-area-inset-left)-1.5rem)]"
+           >
+             <div class="p-4 min-h-[calc(100vh-4rem-61px)]">
+               <div class="nextra-sidebar-search mb-4 block md:hidden">
+                 <div
+                   class="relative w-full nextra-search nextra-flexsearch md:w-64"
+                 >
+                   <div class="relative flex items-center">
+                     <input
+                       type="search"
+                       class="block w-full px-3 py-2 leading-tight rounded-lg appearance-none focus:outline-none focus:ring-1 focus:ring-gray-200 focus:bg-white hover:bg-opacity-5 transition-colors dark:focus:bg-dark dark:focus:ring-gray-100 dark:focus:ring-opacity-20 formulario1 btn1"
+                       placeholder="Search documentation..."
+                       spellcheck="false" data-focus-visible-added
+                     />
+                     <ul class="HIDDENN Result1 absolute z-10 px-0 py-2.5 m-0 mt-2 top-full rounded-xl overflow-hidden overscroll-contain shadow-xl list-none">
+                      <span class="block p-5 text-center text-gray-400 text-sm select-none">No results found....</span>
+                     </ul> 
+                     <div
+                       class="hidden sm:flex absolute inset-y-0 right-0 py-1.5 pr-1.5 select-none pointer-events-none"
+                     >
+                       <kbd
+                         class="inline-flex items-center px-2 font-mono text-sm font-medium bg-white dark:bg-dark dark:bg-opacity-50 text-gray-400 dark:text-gray-500 dark:border-gray-100 dark:border-opacity-20 border rounded"
+                         >/</kbd
+                       >
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="hidden md:block">
+                 <ul>
+                   <li class="active">
+                     <a href="/Introduction">Introduction</a>
+                   </li>
+                   <li class="open">
+                     <a class="cursor-pointer">
+                       <span
+                         class="flex items-center justify-between irvin1"><img src="./mainimg/folder.ico" height="20px" width="20px"/>Main menu <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" height="1em" class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5">
+                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="transition-transform origin-center rotate-90"></path></svg>
+                       </span>
+                     </a>
+                     <div 
+                       class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none" 
+                     >
+                       <div
+                         class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                         style="opacity: 1"
+                       >                          
+                         <ul class="openn">
+                          <li class=''><a href='/Introduction'
+                            >1. Introduction</a></li><li class=''>
+                                    <a
+                                        href='/Firstproject'
+                                    >2. Ecommerce</a>
+                                </li><li class=''>
+                                    <a
+                                        href='/Secondproject'
+                                    >3. Nala Business</a>
+                                </li><li class=''>
+                                    <a
+                                        href='/Thirdproject'
+                                    >4. Profile</a>
+                                </li><li class=''>
+                                    <a
+                                        href='/Fourproject'
+                                    >5. Aesthetics and Design</a>
+                                </li><li class=''>
+                                    <a
+                                        href='/Fiveproject'
+                                    >6. UX Design</a>
+                                </li><li class=''>
+                                    <a
+                                        href='/Finalmodule'
+                                    >7. Performance</a>
+                                </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </li>
+                   <li class="open">
+                     <a class="cursor-pointer"
+                       ><span class="flex items-center justify-between irvin"
+                         ><img src="./mainimg/reactfolder.ico" height="20px" width="20px"/> Learning React JS<svg
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke="currentColor"
+                           height="1em"
+                           class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 type2"
+                         >
+                           <path
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             stroke-width="2"
+                             d="M9 5l7 7-7 7"
+                             class="transition-transform origin-center rotate-90"
+                           ></path></svg></span
+                     ></a>
+                     <div
+                       class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                     >
+                       <div
+                         class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                         style="opacity: 1"
+                       >
+                         <ul class="closed">                          
+                          <li class=''>
+                            <a href='/Designskills'
+                            >1. Introduction To React</a>
+                          </li>
+                          <li class=''>
+                            <a
+                            href='/Firstdesign'
+                            >2. JSX language</a>
+                          </li>
+                          <li class=''>
+                            <a href='/Secondesign'
+                            >3. Rendering </a>
+                          </li>
+                          <li class=''>
+                            <a href='/Thirdesign'
+                            >4. Components & Props </a>
+                          </li>
+                          <li class=''>
+                            <a
+                            href='/Fourdesign'
+                            >5. State </a>
+                          </li>
+                          <li class=''>
+                            <a
+                            href='/Fivedesign'
+                            >6. Events & More </a>
+                          </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </li>
+                   <li class="open">
+                     <a class="cursor-pointer"
+                       ><span class="flex items-center justify-between irvin3"
+                         ><img src="./mainimg/jsfolder.ico" height="20px" width="20px"/> Learning JavaScript<svg
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke="currentColor"
+                           height="1em"
+                           class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 type3"
+                         >
+                           <path
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             stroke-width="2"
+                             d="M9 5l7 7-7 7"
+                             class="transition-transform origin-center rotate-90"
+                           ></path></svg></span
+                     ></a>
+                     <div
+                       class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                     >
+                       <div
+                         class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                         style="opacity: 1"
+                       >
+                         <ul class="closed3">
+                           <li class="">
+                             <a
+                               href="/Performancepatterns"
+                               >1. Starting with JS</a
+                             >
+                           </li>
+                           <li class="">
+                             <a
+                               href="/Staticimport"
+                               >2. JS Topics</a
+                             >
+                           </li>
+                           <li class="">
+                             <a
+                               href="/Dynamicimport"
+                               >3. JS Arrays & More</a
+                             >
+                           </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </li>
+                   <li class="open">
+                     <a class="cursor-pointer"
+                       ><span class="flex items-center justify-between irvin4"
+                         ><img src="./mainimg/perfofolder.ico" height="20px" width="20px"/>Performance <svg
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke="currentColor"
+                           height="1em"
+                           class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 type4"
+                         >
+                           <path
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             stroke-width="2"
+                             d="M9 5l7 7-7 7"
+                             class="transition-transform origin-center rotate-90"
+                           ></path></svg></span
+                     ></a>
+                     <div
+                       class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                     >
+                       <div
+                         class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                         style="opacity: 1"
+                       >
+                         <ul class="closed4">
+                           <li class="">
+                             <a
+                               href="/Renderingintro"
+                               >1. Starting </a
+                             >
+                           </li>
+                           <li class="">
+                             <a
+                               href="/Renderingclient"
+                               >2. Rendering right </a
+                             >
+                           </li>
+                           <li class="">
+                             <a
+                               href="/Renderingstatic"
+                               >3. Final Recomendations </a
+                             >
+                           </li>  
+                         </ul>
+                       </div>
+                     </div>
+                   </li>
+                   <div class="container">
+                     <div class="btn">
+                       <a href="/Shopping">Shop</a>
+                       <img class="imgshop" src="mainimg/shopping-bag.png" height="25px" width="25px"/>
+                      </div>
+                   </div>
+                 </ul>
+               </div>
+               
+<!-- here start burger menu section -->                  
+               
+               <div class="md:hidden">
+                 <ul>
+                   <li class="open active">
+                     <a class="cursor-pointer">
+                       <span class="flex items-center justify-between denk1"
+                         >All Content<svg
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke="currentColor"
+                           height="1em"
+                           class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 rota1"
+                         >
+                           <path
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             stroke-width="2"
+                             d="M9 5l7 7-7 7"
+                             class="transition-transform origin-center rotate-90"
+                           ></path></svg></span
+                     ></a>
+                     <div
+                       class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                     >
+                       <div
+                         class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                         style="opacity: 1"
+                       >
+                         <ul class="">
+                           <li class="active">
+                             <a href="/Introduction">Introduction</a>
+                             <ul>
+                               <li>
+                                 <a
+                                   href="#introduction"
+                                   class="active-anchor"
+                                   ><span class="flex text-sm"
+                                     ><span class="opacity-25">#</span
+                                     ><span class="mr-2"></span
+                                     ><span class="inline-block"
+                                       >Introduction</span
+                                     ></span
+                                   ></a
+                                 >
+                               </li>
+                             </ul>
+                           </li>
+                           <li class="open">
+                             <a class="cursor-pointer"
+                               ><span
+                                 class="flex items-center justify-between denk2"
+                                 >📂 ⏐ Main Menu<svg
+                                   fill="none"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   height="1em"
+                                   class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 rota2"
+                                 >
+                                   <path
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="2"
+                                     d="M9 5l7 7-7 7"
+                                     class="transition-transform origin-center rotate-90"
+                                   ></path></svg></span
+                             ></a>
+                             <div
+                               class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                             >
+                               <div
+                                 class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                                 style="opacity: 1"
+                               >
+                                 <ul class="hd2 retired2">
+                                  <li class=''><a href='/Introduction'
+                                    >1. Introduction</a>
+                                  </li>
+                                  <li class=''>
+                                            <a
+                                                href='/Firstproject'
+                                    >2. Ecommerce </a>
+                                  </li>
+                                  <li class=''>
+                                            <a
+                                                href='/Secondproject'
+                                      >3. Nala Business </a>
+                                  </li>
+                                  <li class=''>
+                                            <a
+                                                href='/Thirdproject'
+                                      >4. Profile </a>
+                                  </li>
+                                  <li class=''>
+                                      <a
+                                        href='/Fourproject'
+                                       >5. Aesthetics </a>
+                                  </li>
+                                  <li class=''>
+                                      <a
+                                        href='/Fiveproject'
+                                        >6. UX Design </a>
+                                  </li>
+                                  <li class=''>
+                                      <a
+                                        href='/Finalmodule'
+                                        >7. Performance</a>
+                                  </li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="open">
+                             <a class="cursor-pointer"
+                               ><span
+                                 class="flex items-center justify-between denk3"
+                                 >⚛️ ⏐ Learning React <svg
+                                   fill="none"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   height="1em"
+                                   class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 rota3"
+                                 >
+                                   <path
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="2"
+                                     d="M9 5l7 7-7 7"
+                                     class="transition-transform origin-center rotate-90"
+                                   ></path></svg></span
+                             ></a>
+                             <div
+                               class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                             >
+                               <div
+                                 class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                                 style="opacity: 1"
+                               >
+                                 <ul class="hd3 retired3">
+                                  <li class=''>
+                                    <a href='/Designskills'
+                                    >1. Introduction to React </a>
+                                  </li>
+                                  <li class=''>
+                                    <a
+                                    href='/Firstdesign'
+                                    >2. JSX Language </a>
+                                  </li>
+                                  <li class=''>
+                                    <a href='/Secondesign'
+                                    >3. Rendering </a>
+                                  </li>
+                                  <li class=''>
+                                    <a href='/Thirdesign'
+                                    >4. Components & Props</a>
+                                  </li>
+                                  <li class=''>
+                                    <a
+                                    href='/Fourdesign'
+                                    >5. State </a>
+                                  </li>
+                                  <li class=''>
+                                    <a
+                                    href='/Fivedesign'
+                                    >6. Events & More </a>
+                                  </li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="open">
+                             <a class="cursor-pointer"
+                               ><span
+                                 class="flex items-center justify-between denk4"
+                                 >⚡️ ⏐ Learning Javascript <svg
+                                   fill="none"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   height="1em"
+                                   class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 rota4"
+                                 >
+                                   <path
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="2"
+                                     d="M9 5l7 7-7 7"
+                                     class="transition-transform origin-center rotate-90"
+                                   ></path></svg></span
+                             ></a>
+                             <div
+                               class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                             >
+                               <div
+                                 class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                                 style="opacity: 1"
+                               >
+                                 <ul class="hd4 retired4">
+                                  <li class="">
+                                    <a
+                                      href="/Performancepatterns"
+                                      >1. Starting with JS</a
+                                    >
+                                  </li>
+                                  <li class="">
+                                    <a
+                                      href="/Staticimport"
+                                      >2. JS Topics</a
+                                    >
+                                  </li>
+                                  <li class="">
+                                    <a
+                                      href="/Dynamicimport"
+                                      >3. JS Loop & More </a
+                                    >
+                                  </li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="open">
+                             <a class="cursor-pointer"
+                               ><span
+                                 class="flex items-center justify-between denk5"
+                                 >⚙️ ⏐ Performance <svg
+                                   fill="none"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   height="1em"
+                                   class="ml-2 p-[2px] rounded-sm min-w-[18px] h-[18px] dark:hover:bg-gray-100 hover:bg-gray-800 hover:bg-opacity-5 dark:hover:bg-opacity-5 rota5"
+                                 >
+                                   <path
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="2"
+                                     d="M9 5l7 7-7 7"
+                                     class="transition-transform origin-center rotate-90"
+                                   ></path></svg></span
+                             ></a>
+                             <div
+                               class="transition-all ease-in-out duration-300 overflow-hidden transform-gpu motion-reduce:transition-none"
+                             >
+                               <div
+                                 class="nextra-collapse-content transition-opacity ease-in-out duration-500 overflow-hidden transform-gpu motion-reduce:transition-none"
+                                 style="opacity: 1"
+                               >
+                                 <ul class="hd5 retired5">
+                                  <li class="">
+                                    <a
+                                      href="/Renderingintro"
+                                      >1. Starting </a
+                                    >
+                                  </li>
+                                  <li class="">
+                                    <a
+                                      href="/Renderingclient"
+                                      >2. Rendering right </a
+                                    >
+                                  </li>
+                                  <li class="">
+                                    <a
+                                      href="/Renderingstatic"
+                                      >3. Final Recomendations </a
+                                    >
+                                  </li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </li>
+                 </ul>
+               </div>
+               <div class="container2">
+                <div class="btn2">
+                  <a href="/Shopping">Shop</a>
+                  <img class="imgshop" src="mainimg/shopping-bag.png" height="25px" width="25px"/>
+                 </div>
+              </div>
+             </div>
+              
+             <!-- here finished the section to analys -->
+             <div class="nextra-sidebar-menu mx-2 border-t dark:border-neutral-800 shadow-[0_-12px_16px_white] dark:shadow-[0_-12px_16px_#111]">
+               <div class="bg-white dark:bg-dark py-4 flex gap-1 pb-4">               
+                 <div class="relative hidden md:block flex-1">
+                   <button class="lini rounded-md px-2 w-full text-left font-medium cursor-default text-xs h-7 transition-colors text-gray-600 dark:text-gray-400 focus:outline-none hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100 dark:hover:bg-opacity-5 dark:hover:text-gray-50" id="headlessui-listbox-button-undefined" type="button" aria-haspopup="true" aria-expanded="false">
+                     <div class="flex items-center gap-2 capitalize">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.25C1 3.11193 1.11193 3 1.25 3H13.75C13.8881 3 14 3.11193 14 3.25V10.75C14 10.8881 13.8881 11 13.75 11H1.25C1.11193 11 1 10.8881 1 10.75V3.25ZM1.25 2C0.559643 2 0 2.55964 0 3.25V10.75C0 11.4404 0.559644 12 1.25 12H5.07341L4.82991 13.2986C4.76645 13.6371 5.02612 13.95 5.37049 13.95H9.62951C9.97389 13.95 10.2336 13.6371 10.1701 13.2986L9.92659 12H13.75C14.4404 12 15 11.4404 15 10.75V3.25C15 2.55964 14.4404 2 13.75 2H1.25ZM9.01091 12H5.98909L5.79222 13.05H9.20778L9.01091 12Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                         <span>System</span>
+                     </div>
+                   </button>
+                   <ul class="HIDDENN nene menu absolute bottom-[105%] min-w-full z-20 mt-1 bg-white dark:bg-neutral-800 dark:ring-white dark:ring-opacity-20 shadow-lg max-h-64 rounded-md py-1 ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm nene" aria-labelledby="headlessui-listbox-button-2" aria-orientation="vertical" id="headlessui-listbox-button-105" role="listbox" tabindex="0" style="width:210px; height:104">
+                     <li class=" flex justify-between ones newefect text-gray-800 dark:text-gray-100 cursor-default select-none relative py-1.5 pl-3 pr-9 whitespace-nowrap" id="headlessui-listbox-option-41" role="option" tabindex="-1" onclick="toggleTheme()">Light
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="4.5" cy="2.5" r=".6" fill="currentColor"></circle><circle cx="4.5" cy="4.5" r=".6" fill="currentColor"></circle><circle cx="4.5" cy="6.499" r=".6" fill="currentColor"></circle><circle cx="4.5" cy="8.499" r=".6" fill="currentColor"></circle><circle cx="4.5" cy="10.498" r=".6" fill="currentColor"></circle><circle cx="4.5" cy="12.498" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="2.5" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="4.5" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="6.499" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="8.499" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="10.498" r=".6" fill="currentColor"></circle><circle cx="6.5" cy="12.498" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="2.5" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="4.5" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="6.499" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="8.499" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="10.498" r=".6" fill="currentColor"></circle><circle cx="8.499" cy="12.498" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="2.5" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="4.5" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="6.499" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="8.499" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="10.498" r=".6" fill="currentColor"></circle><circle cx="10.499" cy="12.498" r=".6" fill="currentColor"></circle></svg>
+                      Dark
+                     </li>
+                     <li class="threes newefect text-gray-800 dark:text-gray-100 cursor-default select-none relative py-1.5 pl-3 pr-9 whitespace-nowrap" id="headlessui-listbox-option-43" role="option" tabindex="-1" onclick="setSystemTheme()">System <span class="absolute inset-y-0 right-0 flex items-center pr-3"><svg viewBox="0 0 20 20" width="1em" height="1em" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </aside>
+         <div id="reach-skip-nav" data-reach-skip-nav-content=""></div>
+            <div id="root4"></div> 
+       </div>
+     </div>
+    <aside> 
+       
+   </aside>
+       <footer class="bg-gray-100 dark:bg-neutral-900 pb-[env(safe-area-inset-bottom)]">
+       <div
+         class="max-w-[90rem] mx-auto pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] py-12">
+         <div class="flex justify-center flex-col-reverse md:flex-row items-center md:items-end">
+           <span class="text-gray-600 dark:text-gray-400"
+             >2024 © Nala Business
+             </span>
+           <div class="mt-6"></div>
+         </div>
+       </div>
+     </footer>
+   </div>
+ </div>
+<script src="./functhtml.js"></script>
+</body>
+</html>
