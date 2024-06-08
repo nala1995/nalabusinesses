@@ -1,62 +1,124 @@
-import React from 'react'
-/* import pictureone from '../../assets/imgs/isometricroom.jpg' */
+import React, { useState} from 'react'
+import whatsapp from '../../assets/imgs/whatsapp1.png'
 import {CarouselPlugin} from '../../components/CarouselPlugin'
 import {ThreeDCardDemo} from '../../Ctest'
+import migration from '../../assets/imgs/migracion.jpeg'
+import optimization from '../../assets/imgs/optimization.jpeg'
+import maintenance from '../../assets/imgs/maintenance.jpeg'
+import ebusiness from '../../assets/imgs/ebusiness.jpeg'
+import automation from '../../assets/imgs/automation.jpeg'
+import sketchs from '../../assets/imgs/sketch.jpeg'
+import foreign from '../../assets/imgs/Foreign.jpeg'
+import marketing from '../../assets/imgs/marketing.jpeg'
+import supplych from '../../assets/imgs/supplych.jpeg'
+import CardPopup from '../../components/CardPopup'
 
 const cardData = [
   {
-    title: "Make things float in air",
-    description: "Hover over this card to unleash the power of CSS perspective",
-    imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    price: "USD 500",
+    id: 1,
+    title: "Ecommerce & Migrations",
+    description: "We build your Ecommerce and website at the same time that We help you to migrate to different platforms.",
+    imageUrl: migration,
+    price: "3500",
+    currency: "USD",
+    priceCOP: "1376214000",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 2",
-    description: "Hover over this card to unleash the power of CSS perspective",
-    imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    price: "USD 600",
+    id: 2,
+    title: "Setup & Optimization",
+    description: "We help you to maintain your website and optimize it for better performance if you need a small or large improvement we stand out for you.",
+    imageUrl: optimization,
+    price: "250",
+    currency: "USD",
+    priceCOP: "98301000",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 3",
-    description: "Description for card 3",
-    imageUrl: "https://example.com/image3.jpg",
-    price: "USD 700",
+    id: 3,
+    title: "Active support & Maintenance ",
+    description: "We provide you with active support and maintenance for your website and Ecommerce. We are always here for you when when maintenance is needed no matter wich problem.",
+    imageUrl: maintenance,
+    price: "500",
+    currency: "USD",
+    priceCOP: "196602000",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 4",
-    description: "Description for card 3",
-    imageUrl: "https://example.com/image3.jpg",
-    price: "USD 700",
+    id: 4,
+    title: "E-Business consulting ",
+    description: "Contract our E-Business consulting services and we will help you to grow your business ideas with our tailored solutions for your entrepreneurial company.",
+    imageUrl: ebusiness,
+    price: "250",
+    currency: "USD",
+    priceCOP: "98301000",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 5",
-    description: "Description for card 3",
-    imageUrl: "https://example.com/image3.jpg",
-    price: "USD 700",
+    id: 5,
+    title: "Digital Diagnosis & Automation",
+    description: "Adcquire our Digital Diagnosis & Automation services and we will help you to automate the most essencial and relevant aspects of your business processes.",
+    imageUrl: automation,
+    price: "400",
+    currency: "USD",
+    priceCOP: "157281600",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 6",
-    description: "Description for card 3",
-    imageUrl: "https://example.com/image3.jpg",
-    price: "USD 700",
+    id: 6,
+    title: "Sketchs & Designs",
+    description: "If you need a sketch or design for your website or Ecommerce we are here for you. We will provide you with the best designs for your business and with the best technics and latest trends on this one.",
+    imageUrl: sketchs,
+    price: "300",
+    currency: "USD",
+    priceCOP: "117961200",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
   {
-    title: "Card 7",
-    description: "Description for card 3",
-    imageUrl: "https://example.com/image3.jpg",
-    price: "USD 700",
+    id: 7,
+    title: "Foreign Trade Advisory",
+    description: "We can help you to expand your business and to reach new markets with our Foreign Trade Advisory services. We will help you to reach new markets and to expand your business worldwide by helping you understand the Impo and Expo processes and help you get in to it with your business.",
+    imageUrl: foreign,
+    price: "1500",
+    currency: "USD",
+    priceCOP: "589806000",
+    currencyCOP: "COP",
+    buttonText: "Buy now",
+    link: "https://twitter.com/mannupaaji"
+  },
+  {
+    id: 8,
+    title: "Marketing Research",
+    description: "We provide you with the best Marketing Research services. We will help you to understand your market and to reach your target audience with the best strategies and the best marketing research services by using the latest technics in the field in order to get profitable margins.",
+    imageUrl: marketing,
+    price: "1400",
+    currency: "USD",
+    priceCOP: "550485600",
+    currencyCOP: "COP",
+    buttonText: "Buy now",
+    link: "https://twitter.com/mannupaaji"
+  },
+  {
+    id: 9,
+    title: "Supply Chain for Ecommerce",
+    description: "We provide you with the best Supply Chain services for your Ecommerce. We will help you to manage your supply chain and contract the best services and planne the best strategies for your Ecommerce. We will help you to manage your supply chain and to get the best results for your Ecommerce.",
+    imageUrl: supplych,
+    price: "2150",
+    currency: "USD",
+    priceCOP: "845388600",
+    currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji"
   },
@@ -64,6 +126,17 @@ const cardData = [
 ];
 
 const Shopping = ()=> {
+
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+  };
+
+  const closePopup = () => {
+    setSelectedCard(null);
+  };
+
   return (
     <React.Fragment>
       <article className='nextra-body relative pb-8 w-full max-w-full flex min-w-0 pr-[calc(env(safe-area-inset-right)-1.5rem)] nextra-body-typesetting-default'>
@@ -92,26 +165,29 @@ const Shopping = ()=> {
              </div>
              </p>
              <br></br>
-           <h1>Services</h1>
              <h2>
-               <span className="subheading-anchor" id="Facts"></span>
-               <a href="#Facts" className="anchor text-current no-underline no-outline">The Facts<span className="anchor-icon" aria-hidden="true">#</span></a>
+               <span className="subheading-anchor" id="Services"></span>
+               <a href="#Services" className="anchor text-current no-underline no-outline">Sercives<span className="anchor-icon" aria-hidden="true">#</span></a>
              </h2>
              <p>
               Buy our services and undertake a journey to the future of commerce. 
              </p>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
-               {cardData.map((card, index) => (
-                 <ThreeDCardDemo
-                     key={index}
-                     title={card.title}
-                     description={card.description}
-                     imageUrl={card.imageUrl}
-                     price={card.price}
-                     buttonText={card.buttonText}
-                     link={card.link}
-                 />
+               {cardData.map((card) => (
+                  <ThreeDCardDemo
+                    key={card.id}
+                    title={card.title}
+                    description={card.description}
+                    imageUrl={card.imageUrl}
+                    currency={card.currency}
+                    price={card.price}
+                    currencyCOP={card.currencyCOP}
+                    priceCOP={card.priceCOP}
+                    buttonText={card.buttonText}
+                    link={card.link}
+                    onClick={() => handleCardClick(card)}
+                  />
                 ))}
                </div>
              </div>
@@ -151,15 +227,15 @@ const Shopping = ()=> {
                  </p>
                  <li className='scroll-py-6 scroll-my-6'>
                    <a
-                     href='#Design'
+                     href='#Pick-up'
                      className='no-underline inline-block font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300'
-                     >Design</a>
+                     >Pick-up</a>
                  </li>
                  <li className='scroll-py-6 scroll-my-6'>
                    <a
-                     href='#Facts'
+                     href='#Services'
                      className='no-underline inline-block font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300'
-                     >Facts</a>
+                     >Services</a>
                  </li>
                </ul>
                <div
@@ -173,8 +249,23 @@ const Shopping = ()=> {
                    >Edit this page</a>
                </div>
              </div>
+             <a href="https://api.whatsapp.com/send?phone=3143468608" class="whatsapp-icon">
+                <img height="51px" width="51px" src={whatsapp} alt="WhatsApp"/>
+              </a>
            </div>
         </article>
+        {selectedCard && (
+        <CardPopup
+          title={selectedCard.title}
+          description={selectedCard.description}
+          imageUrl={selectedCard.imageUrl}
+          price={selectedCard.price}
+          currency={selectedCard.currency}
+          priceCOP={selectedCard.priceCOP}
+          currencyCOP={selectedCard.currencyCOP}
+          onClose={closePopup}
+        />
+      )}
     </React.Fragment>
   )
 }

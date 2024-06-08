@@ -93,9 +93,11 @@ function Home() {
                  </li>
                </ul>
                <div className='nextra-toc-meta border-t mt-8 pt-8 shadow-[0_-12px_16px_white] dark:shadow-[0_-12px_16px_#111] bg-white dark:bg-dark sticky pb-8 bottom-0 dark:border-neutral-800'> 
-               <a href="https://api.whatsapp.com/send?phone=3143468608" class="whatsapp-icon"><img style={{height:'51px', width:'51px'}} src={whatsapp} alt="WhatsApp"/></a>
                </div>
                </div>
+               <a href="https://api.whatsapp.com/send?phone=3143468608" class="whatsapp-icon">
+                  <img style={{height:'51px', width:'51px'}} src={whatsapp} alt="WhatsApp"/>
+                </a>
              </div>
         </article>
     </React.Fragment>

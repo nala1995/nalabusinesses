@@ -56,7 +56,7 @@ import React from 'react';
 import { MouseEnterProvider } from './components/3d-card';
 import { CardContainer, CardBody, CardItem } from './components/3d-card';
 
-export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText, link }) {
+export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText, link, currency, onClick }) {
   return (
     <MouseEnterProvider>
       <CardContainer className="inter-var">
@@ -78,9 +78,10 @@ export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText
           </CardItem>
           <div className="flex justify-between items-center mt-20">
             <CardItem translateZ={20} as="a" href={link} target="_blank" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+              {currency}
               {price}
             </CardItem>
-            <CardItem translateZ={20} as="button" className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-xs font-bold">
+            <CardItem translateZ={20} as="button" className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-xs font-bold" onClick={onClick}>
               {buttonText}
             </CardItem>
           </div>

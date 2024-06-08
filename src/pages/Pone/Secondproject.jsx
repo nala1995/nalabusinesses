@@ -1,5 +1,6 @@
 import React from 'react'
 import Brandslogan from '../../assets/imgs/BrandSlogan.PNG'
+import whatsapp from '../../assets/imgs/whatsapp1.png'
 import videon2 from '../../assets/imgs/nala-add.mp4'
 import {AccordionDemo} from '../../components/Accordion'
 import {SelectForm} from '../../components/SelectForm'
@@ -121,6 +122,9 @@ function Secondproject() {
                    >Edit this page</a>
                </div>
              </div>
+             <a href="https://api.whatsapp.com/send?phone=3143468608" class="whatsapp-icon">
+                <img height="51px" width="51px" src={whatsapp} alt="WhatsApp"/>
+             </a>
            </div>
          </article>
     </React.Fragment>
