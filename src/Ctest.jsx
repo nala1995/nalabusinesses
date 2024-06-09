@@ -56,7 +56,7 @@ import React from 'react';
 import { MouseEnterProvider } from './components/3d-card';
 import { CardContainer, CardBody, CardItem } from './components/3d-card';
 
-export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText, link, currency, onClick }) {
+export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText, link, currency, onClick, id }) {
   return (
     <MouseEnterProvider>
       <CardContainer className="inter-var">

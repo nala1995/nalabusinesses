@@ -3,6 +3,7 @@ import whatsapp from '../../assets/imgs/whatsapp1.png'
 import {CarouselPlugin} from '../../components/CarouselPlugin'
 import {ThreeDCardDemo} from '../../Ctest'
 import migration from '../../assets/imgs/migracion.jpeg'
+import PaypalLogic from '../../Paypalogic'
 import optimization from '../../assets/imgs/optimization.jpeg'
 import maintenance from '../../assets/imgs/maintenance.jpeg'
 import ebusiness from '../../assets/imgs/ebusiness.jpeg'
@@ -129,6 +130,7 @@ const Shopping = ()=> {
 
   const [selectedCard, setSelectedCard] = useState(null);
 
+
   const handleCardClick = (card) => {
     setSelectedCard(card);
   };
@@ -136,6 +138,10 @@ const Shopping = ()=> {
   const closePopup = () => {
     setSelectedCard(null);
   };
+
+
+  
+
 
   return (
     <React.Fragment>
@@ -176,18 +182,18 @@ const Shopping = ()=> {
                <div className="w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
                {cardData.map((card) => (
                   <ThreeDCardDemo
-                    key={card.id}
-                    title={card.title}
-                    description={card.description}
-                    imageUrl={card.imageUrl}
-                    currency={card.currency}
-                    price={card.price}
-                    currencyCOP={card.currencyCOP}
-                    priceCOP={card.priceCOP}
-                    buttonText={card.buttonText}
-                    link={card.link}
-                    onClick={() => handleCardClick(card)}
-                  />
+                   key={card.id}
+                   id={card.id}
+                   title={card.title}
+                   description={card.description}
+                   imageUrl={card.imageUrl}
+                   currency={card.currency}
+                   price={card.price}
+                   currencyCOP={card.currencyCOP}
+                   priceCOP={card.priceCOP}
+                   buttonText={card.buttonText}
+                   link={card.link}
+                   onClick={() => { handleCardClick(card);}} />
                 ))}
                </div>
              </div>
@@ -256,6 +262,7 @@ const Shopping = ()=> {
         </article>
         {selectedCard && (
         <CardPopup
+          id={selectedCard.id}
           title={selectedCard.title}
           description={selectedCard.description}
           imageUrl={selectedCard.imageUrl}
@@ -263,9 +270,15 @@ const Shopping = ()=> {
           currency={selectedCard.currency}
           priceCOP={selectedCard.priceCOP}
           currencyCOP={selectedCard.currencyCOP}
-          onClose={closePopup}
-        />
-      )}
+          onClose={closePopup}>
+          <PaypalLogic
+            productId={selectedCard.id}
+            productQuantity={1} // Puedes definir la cantidad según tus necesidades
+            price={selectedCard.price}
+            currency={selectedCard.currency}
+          />
+        </CardPopup>
+        )}
     </React.Fragment>
   )
 }
