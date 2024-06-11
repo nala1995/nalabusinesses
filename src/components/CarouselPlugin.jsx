@@ -1,49 +1,10 @@
-/* import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
-
-import { Card, CardContent } from "../components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../components/ui/carousel"
-
-export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
-
-  return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-full max-w-xs"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  )
-} */
-
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-
+import ODDBALL from "../assets/imgs/oddballs.webp";
+import palillos from "../assets/imgs/pickem.webp";
+import sketchone from "../assets/imgs/sketch1.jpeg";
+import promone from "../assets/imgs/Promo1.jpeg";
+import promotwo from "../assets/imgs/Promo2.jpeg";
 import { Card, CardContent } from "../components/ui/card";
 import {
   Carousel,
@@ -55,29 +16,34 @@ import {
 
 const carouselItems = [
   {
-    image: "https://via.placeholder.com/150",
-    title: "Title 1",
-    description: "This is the description for item 1",
+    image: ODDBALL,
+    title: "Music ball",
+    linking: "https://www.google.com",
+    description: "This is an interesting product which is a ball that plays music when you throw it. you can create your own music and melodies with the Ball's movement.",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Title 2",
-    description: "This is the description for item 2",
+    image: palillos,
+    title: "Toothpicks with flavours",
+    linking: "https://www.google.com",
+    description: "This is a product that comes with a variety of flavours, you can choose the one you like the most and enjoy the taste of your toothpicks.",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Title 3",
-    description: "This is the description for item 3",
+    image: sketchone,
+    title: "Website sketch Aesthetic",
+    linking: "https://www.google.com",
+    description: "This is a website sketch that you can use to create your own website with a unique aesthetic style and with a database added.",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Title 4",
-    description: "This is the description for item 4",
+    image: promone,
+    title: "Your products could be here!",
+    linking: "https://www.google.com",
+    description: "This is a visible space for your products, you can add your products here and get more visibility or if you need an independent site to sell it.",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Title 5",
-    description: "This is the description for item 5",
+    image: promotwo,
+    title: "Your product could be here!",
+    linking: "https://www.google.com",
+    description: "This is a visible space for your products, you can add your products here and get more visibility or if you need an independent site to sell it.",
   },
 ];
 
@@ -101,6 +67,7 @@ export function CarouselPlugin() {
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <img src={item.image} alt={`Carousel item ${index + 1}`} className="mb-4 w-full h-auto object-cover" />
                   <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
+                  <div className="mb-2 carouselbtn"><a href={item.linking} className="btn btn-primary mb-2">Buy</a></div>
                   <p className="text-center">{item.description}</p>
                 </CardContent>
               </Card>
