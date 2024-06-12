@@ -18,31 +18,31 @@ const carouselItems = [
   {
     image: ODDBALL,
     title: "Music ball",
-    linking: "https://www.google.com",
+    linking: "https://checkout.wompi.co/l/3IpI18",
     description: "This is an interesting product which is a ball that plays music when you throw it. you can create your own music and melodies with the Ball's movement.",
   },
   {
     image: palillos,
     title: "Toothpicks with flavours",
-    linking: "https://www.google.com",
+    linking: "https://checkout.wompi.co/l/z5XUIc",
     description: "This is a product that comes with a variety of flavours, you can choose the one you like the most and enjoy the taste of your toothpicks.",
   },
   {
     image: sketchone,
     title: "Website sketch Aesthetic",
-    linking: "https://www.google.com",
+    linking: "https://checkout.wompi.co/l/VPOS_MJRNLU",
     description: "This is a website sketch that you can use to create your own website with a unique aesthetic style and with a database added.",
   },
   {
     image: promone,
     title: "Your products could be here!",
-    linking: "https://www.google.com",
+    linking: "https://checkout.wompi.co/l/VPOS_MJRNLU",
     description: "This is a visible space for your products, you can add your products here and get more visibility or if you need an independent site to sell it.",
   },
   {
     image: promotwo,
     title: "Your product could be here!",
-    linking: "https://www.google.com",
+    linking: "https://checkout.wompi.co/l/VPOS_MJRNLU",
     description: "This is a visible space for your products, you can add your products here and get more visibility or if you need an independent site to sell it.",
   },
 ];

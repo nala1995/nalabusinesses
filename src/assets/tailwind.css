@@ -4133,6 +4133,76 @@ a>h1 {
     transition: 0.3s;
     z-index: 1000;
  }
+
+ .stripe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e3;
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: #212121;
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 9px;
+    margin: 4px 2px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    z-index: 1000;
+ }
+
+ .wompi-btn:hover {
+    background-color: #ffffff;
+    color: #212121;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+ }
+
+ .stripe-btn:hover {
+    background-color: #ffffff;
+    color: #212121;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+ }
+ 
+ .binance-btn:hover {
+    background-color: #fce620e7;
+    color: #212121;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+ }
+
+ .binance-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e3;
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: #212121;
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 9px;
+    margin: 4px 2px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    z-index: 1000;
+ }
+
+ .stripeicon {
+    margin-left: 20px;
+ }
+
  .imgwompi {
     height: 60px;
     width: 160px;
