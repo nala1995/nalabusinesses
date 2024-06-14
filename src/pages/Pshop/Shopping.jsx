@@ -25,7 +25,8 @@ const cardData = [
     priceCOP: "1376214000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P1v3DBL3mxlGG1nHOoNYabk'
   },
   {
     id: 2,
@@ -37,7 +38,8 @@ const cardData = [
     priceCOP: "98301000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P21pIBL3mxlGG1nojIP7kGj'
   },
   {
     id: 3,
@@ -49,7 +51,8 @@ const cardData = [
     priceCOP: "196602000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P21sHBL3mxlGG1nJCzklD73'
   },
   {
     id: 4,
@@ -61,7 +64,8 @@ const cardData = [
     priceCOP: "98301000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P229HBL3mxlGG1ndvxcpsps'
   },
   {
     id: 5,
@@ -73,7 +77,8 @@ const cardData = [
     priceCOP: "157281600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P22CeBL3mxlGG1ndW22fVuv'
   },
   {
     id: 6,
@@ -85,7 +90,8 @@ const cardData = [
     priceCOP: "117961200",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P22FrBL3mxlGG1nX4yOzkpR'
   },
   {
     id: 7,
@@ -97,7 +103,8 @@ const cardData = [
     priceCOP: "589806000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P22MBBL3mxlGG1nW9pGzOdD'
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ const cardData = [
     priceCOP: "550485600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P22dbBL3mxlGG1noGaLoXcb'
   },
   {
     id: 9,
@@ -121,9 +129,10 @@ const cardData = [
     priceCOP: "845388600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji"
+    link: "https://twitter.com/mannupaaji",
+    stripeProductId: 'price_1P22hBBL3mxlGG1nsLA9bQg4'
   },
-  // Añade más objetos de tarjeta según sea necesario
+  // you can add more cards here hello there
 ];
 
 const Shopping = ()=> {
@@ -193,6 +202,7 @@ const Shopping = ()=> {
                    priceCOP={card.priceCOP}
                    buttonText={card.buttonText}
                    link={card.link}
+                   stripeProductId={card.stripeProductId}
                    onClick={() => { handleCardClick(card);}} />
                 ))}
                </div>
@@ -270,6 +280,7 @@ const Shopping = ()=> {
           currency={selectedCard.currency}
           priceCOP={selectedCard.priceCOP}
           currencyCOP={selectedCard.currencyCOP}
+          stripeProductId={selectedCard.stripeProductId}
           onClose={closePopup}>
           <PaypalLogic
             productId={selectedCard.id}
