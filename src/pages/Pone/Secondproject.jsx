@@ -4,8 +4,9 @@ import whatsapp from '../../assets/imgs/whatsapp1.png'
 import videon2 from '../../assets/imgs/nala-add.mp4'
 import {AccordionDemo} from '../../components/Accordion'
 import {SelectForm} from '../../components/SelectForm'
+import { Toaster } from "../../components/ui/toaster";
 
-function Secondproject() {
+function Secondproject({ children }) {
   return (
     <React.Fragment>
       <article className='nextra-body relative pb-8 w-full max-w-full flex min-w-0 pr-[calc(env(safe-area-inset-right)-1.5rem)] nextra-body-typesetting-default'>
@@ -54,7 +55,7 @@ function Secondproject() {
                <a
                  target='_blank'
                  rel='noreferrer'
-                 href='https://github.com/orgs/nala1995/dashboard' >Here you are going to find the Developmet repository from Nala Business here all the projects or ideas like sketchs and designs for ecommerces and Blogs and all pages and designs in Front-End technologies.</a>
+                 href='https://github.com/' >Here you are going to find the Developmet repository from Nala Business here all the projects or ideas like sketchs and designs for ecommerces and Blogs and all pages and designs in Front-End technologies.</a>
                  ,At the same time, Here you will find the different technologies that we use for the FrontEnd
                  as well as the BackEnd and the different tools that we use for the development of the projects.
              </p>
@@ -70,6 +71,7 @@ function Secondproject() {
              <div>
                 <SelectForm />
              </div>
+             <Toaster />
              <div className='mt-16'></div>
              <div
                className='nextra-navigation-links pt-8 mb-8 border-t dark:border-neutral-800 flex flex-row items-center justify-between'
@@ -116,7 +118,7 @@ function Secondproject() {
                >
                  <a
                    className='text-xs font-medium no-underline block text-gray-500 mb-2 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
-                   href='https://github.com/orgs/EarnMarket'
+                   href='https://github.com/'
                    target='_blank'
                    rel='noreferrer'
                    >Edit this page</a>

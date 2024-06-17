@@ -17,11 +17,6 @@ const Firstproject = () => {
                </div>
              </div>
            <h1>Why an Ecommerce?</h1>
-             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
-               <div className="w-auto grid grid-cols-1">
-                 <img src={imgge} alt="img" className="will-change animate-pulse" height="500" width="800"/>
-               </div>
-             </div>
              <h2>
                <span className="subheading-anchor" id="Summary"></span>
                <a href="#Summary" className="anchor text-current no-underline no-outline">Summary<span className="anchor-icon" aria-hidden="true">#</span></a>
@@ -31,21 +26,28 @@ const Firstproject = () => {
              Specifically, Snipcart is the solution you are looking for if building an ecommerce or choosing one. Not only does it allow you to set up an ecommerce in a few minutes, but it is also a secure, reliable, and advanced solution. But this one is not solely the only tool as we may choose from a huge variety of libraries and tools to build an ecommerce or simply choosing a marketplace.
              On this website you will inderstand the importance of having, choosing, building a marketplace, if you want to build a <code>Entrepreneurial Digital Business</code>.
              </p>
+             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
+               <div className="w-auto grid grid-cols-1">
+                 <img src={imgge} alt="img" className="will-change animate-pulse rounded-md" height="500" width="800"/>
+               </div>
+             </div>
              <br></br>
            <h1>Consider testing your ecommerce website or marketplace</h1>
              <h2>
                <span className="subheading-anchor" id="Suggestion"></span>
                <a href="#Suggestion" className="anchor text-current no-underline no-outline">Suggestion<span className="anchor-icon" aria-hidden="true">#</span></a>
              </h2>
+          <div className='w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4'>
              <p>
              Before you start selling on your website or deploy your project, is essencial to test the platform as the proper performing means success and will push you into the following steps ahead into the ecommerce or programming journey. <code>A/B Test</code> is a good way to test your website, it is a method to compare two versions of a webpage or app against each other to determine which one performs better. A/B testing is essentially an experiment where two or more variants of a page are shown to users at random, and statistical analysis is used to determine which variation performs better for a given conversion goal. <code>Google Analytics</code> is a good tool to track your website and get insights about your users and their behavior. But if you are building an application by your own the following are the best ways:
              <li>End to End test for React JS<code>cipres</code> and <code>Travis.yml</code></li>
              </p>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
-                 <img src={imgge2} alt="img" className="will-change animate-bounce" height="100" width="400"/>
+                 <img src={imgge2} alt="img" className="will-change animate-bounce rounded-md" height="100" width="400"/>
                </div>
              </div>
+          </div>
              <div className='mt-16'></div>
              <div
                className='nextra-navigation-links pt-8 mb-8 border-t dark:border-neutral-800 flex flex-row items-center justify-between'

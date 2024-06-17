@@ -29,7 +29,7 @@ import {
   SelectValue,
 } from "../components/ui/select";
 import { toast } from "../components/ui/use-toast";
-import "../assets/main.css"
+import { Input } from "../components/ui/input";
 
 const FormSchema = z.object({
   email: z
@@ -76,23 +76,41 @@ export function SelectForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="backdrop-blur">
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Mercado Libe">Mercado Libre 
-                    <img className="dwell h-6 w-6 ml-2" alt="iconmeli" src={meli}/>
+                  <SelectItem className="dwelling1" value="MercadoLibe@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="dwell h-6 w-6 ml-2 mr-22" alt="iconmeli" src={meli}/>
+                      <div className="mr-16">Mercado Libre</div> 
+                    </div>
                   </SelectItem>
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Shopify">Shopify
-                    <img className="dwell h-6 w-6 ml-2" alt="iconshopy" src={shopify}/>
+                  <SelectItem className="dwelling1" value="Shopify@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="dwell h-6 w-6 ml-2 mr-22" alt="iconshopy" src={shopify}/>
+                      <div className="mr-16">Shopify</div>
+                    </div>
                   </SelectItem>
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Vtex">Vtex
-                    <img className="dwell h-6 w-6 ml-2" alt="iconvtex" src={vtex}/>
+                  <SelectItem className="dwelling1" value="Vtex@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="dwell h-6 w-6 ml-2 mr-22" alt="iconvtex" src={vtex}/>
+                      <div className="mr-16">Vtex</div>
+                    </div>
                   </SelectItem>
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Woocommerce">Woocommerce
-                    <img className="dwell h-6 w-6 ml-2" alt="iconwoocomerce" src={woocommerce}/>
+                  <SelectItem className="dwelling1" value="Woocommerce@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="dwell h-6 w-6 ml-2 mr-22" alt="iconwoocomerce" src={woocommerce}/>
+                      <div className="mr-16">Woocommerce</div>
+                    </div>
                   </SelectItem>
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Prestashop">Prestashop
-                    <img className="dwell h-6 w-6 ml-2" alt="iconpresta" src={prestashop}/>
+                  <SelectItem className="dwelling1" value="Prestashop@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="dwell h-6 w-6 ml-2 mr-22" alt="iconpresta" src={prestashop}/>
+                      <div className="mr-16">Prestashop</div>
+                    </div>
                   </SelectItem>
-                  <SelectItem className="dwelling flex items-center justify-evenly space-x-2" value="Wix">Wix
-                    <img className="h-6 w-6 ml-2" alt="iconwix" src={wix}/>
+                  <SelectItem className="dwelling1" value="Wix@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="h-6 w-6 ml-2 mr-22" alt="iconwix" src={wix}/>
+                      <div className="mr-16">Wix</div>
+                    </div>
                   </SelectItem>
                 </SelectContent>
               </Select>
@@ -100,7 +118,10 @@ export function SelectForm() {
             </FormItem>
           )}
         />
-        <Button className="bg-white text-black" type="submit">Submit</Button>
+      <div className="flex w-full max-w-sm items-center space-x-2">
+        <Input type="email" placeholder="Email" />
+        <Button className="shadow-teal-800" type="submit">Subscribe</Button>
+      </div>
       </form>
     </Form>
   );

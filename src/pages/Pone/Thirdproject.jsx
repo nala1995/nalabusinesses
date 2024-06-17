@@ -15,10 +15,15 @@ const Thirdproject =()=> {
                  Profile
                </div>
              </div>
-             <h1>Professional Profile</h1>
+             <h1>Team's Professional Profiles</h1>
              <div className='w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8'>
-               <div className='w-auto grid grid-cols-1'>
-                 <img src={profileimg} alt='' className='will-change' height='10' width='300'/>
+               <div className='w-auto flex items-end'>
+                 <img src={profileimg} alt='leader' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
+                 <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436185.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1718496000&semt=ais_user" alt='software enginer' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
+                 <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-profile-8187680-6590622.png?f=webp" alt='software enginer' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
+                 <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1718496000&semt=ais_user" alt='software enginer' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
+                 <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436178.jpg" alt='software enginer' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHxYv5XjZ2Eq5wbqRdGzn3E1jxlhyNGMNipO84_irJMxkjWMtcapGYzbS8V7cQetxAycg&usqp=CAU" alt='software enginer' className='will-change rounded-full hover:bg-sky-700' height='20' width='50'/>
                </div>
              </div>
              <h2>
@@ -31,8 +36,9 @@ const Thirdproject =()=> {
                    aria-hidden='true'
                    >#</span></a>
              </h2>
+             <h3>Founder</h3>
              <p>
-              The main object for this section is to show you all my professional background and the different sort of experiences I have had in the past, I hope you enjoy it. 
+              The main object for this section is to show you all our Staff's professional backgrounds and the different sort of experiences each have had in the past, We hope you enjoy it. 
                <a
                  target='_blank'
                  rel='noreferrer'
@@ -146,6 +152,11 @@ const Thirdproject =()=> {
              <p>
                With all the years that I've got working and studying I have learnt how to implement these two pathways, software skills always will help you improve different processes and make your life easier, In adition the ecommerce is starting to be a big part of the world economy, so it's important to know how to handle it and build or modify each process managed in the web-platforms. 
              </p>
+             <hr />
+             <h3>Software Engineers</h3>
+             <p>
+             Our talented software engineering team is a blend of brilliant minds focused on both the front and back ends of the user experience. Our front-end developers, with their expertise in UX/UI design and languages like HTML, CSS, and JavaScript, React.js Next.js Vue.js and more craft intuitive and visually appealing interfaces. They work hand-in-hand with our back-end engineers, who build the robust systems that power those interfaces. Together, they ensure a seamless and enjoyable user experience, from the first click to the core functionality.  
+             </p>
              <div className='mt-16'></div>
              <div
                className='nextra-navigation-links pt-8 mb-8 border-t dark:border-neutral-800 flex flex-row items-center justify-between'
@@ -184,7 +195,7 @@ const Thirdproject =()=> {
                    <a
                      href='#Profile'
                      className='no-underline inline-block font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300'
-                     >Profile</a>
+                     >Profiles</a>
                  </li>
                </ul>
                <div

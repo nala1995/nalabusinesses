@@ -17,35 +17,39 @@ function Introduction() {
                </div>
              </div>
            <h1>About this website!!</h1>
-             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
-               <div className="w-auto grid grid-cols-1">
-                 <img src={picture} alt="img" className="will-change animate" height="500" width="800"/>
-               </div>
-             </div>
              <h2>
                <span className="subheading-anchor" id="Main"></span>
                <a href="#Main" className="anchor text-current no-underline no-outline">Main<span className="anchor-icon" aria-hidden="true">#</span></a>
              </h2>
+             <div className='w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4'>
              <p>
              This Website is intended to be a guide for those who want to start their own ecommerce website or event a personal blog, also this website is meant to everyone who is learning about <code>software-programming.</code>
              In this website you can find my journey on build my own website and also you can find some tips and tricks that I have learned along the way. The tootls and technologies that I have used are mainly free and open source, so you can use them too.
              Having said that, I hope you enjoy this website and if you have any questions or suggestions, please feel free to contact me. 
              </p>
+             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
+               <div className="w-auto">
+                 <img src={picture} alt="img" className="will-change animate" height="auto" width="auto"/>
+               </div>
+             </div>
+             </div>
              <br></br>
            <h1>Topics I will focus on</h1>
              <h2>
                <span className="subheading-anchor" id="Suggestion"></span>
                <a href="#Suggestion" className="anchor text-current no-underline no-outline">Suggestion<span className="anchor-icon" aria-hidden="true">#</span></a>
              </h2>
+             <div className='w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4'>
+            <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
+               <div className="w-auto grid grid-cols-1">
+                 <img src={intropic} alt="img" className="will-change" height="auto" width="auto" />
+               </div>
+             </div>
              <p>
              The languages and technologies that I've used are <code>HTML</code> and <code>CSS</code> for the frontend and <code>Javascript</code> for the backend as well as <code>React</code> as framework language, but I will also talk about other technologies that I have used to build this website with is built with React mainly but uses the technologies previously named.
              On the other hand I will also talk about the <code>E-business</code> and business initiative which is the creation of a brand called <code>Nala Business</code>, This brand is intended to be an online service to help a diverse groups who can be interested on build or be advised on ecommerce matters or developement matters.
              </p>
-            <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
-               <div className="w-auto grid grid-cols-1">
-                 <img src={intropic} alt="img" className="will-change" height="500" width="800" />
-               </div>
-             </div>
+              </div>
              <div className='mt-16'></div>
              <div
                className='nextra-navigation-links pt-8 mb-8 border-t dark:border-neutral-800 flex flex-row items-center justify-between'

@@ -21,6 +21,8 @@ import Renderingclient from '../src/pages/Pfour/Renderingclient'
 import Renderingintro from '../src/pages/Pfour/Renderingintro'
 import Renderingstatic from '../src/pages/Pfour/Renderingstatic'
 import Shoppingpage from '../src/pages/Pshop/Shopping.jsx'
+import Success from '../src/pages/Pshop/Success.jsx'
+import Fail from '../src/pages/Pshop/Fail.jsx'
 
 const App = () => {
   return (
@@ -47,6 +49,8 @@ const App = () => {
             <Route path='/Renderingintro' element={<Renderingintro />} />
             <Route path='/Renderingstatic' element={<Renderingstatic />} />
             <Route path='/Shopping' element={<Shoppingpage />} />
+            <Route path='/Success' element={<Success />} />
+            <Route path='/Fail' element={<Fail />} />
          </Routes>
     </>
   )
