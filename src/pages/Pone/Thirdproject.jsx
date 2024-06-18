@@ -66,7 +66,7 @@ const Thirdproject =()=> {
                    </svg>
                  </div>
                  <div>
-                   <div className='my-0 font-small dark:text-white'>
+                   <div className='my-0 font-small text-gray'>
                      SAP ERP / Warehouse modules inbound / Microsoft Tools Advanced / Power Bi  
                    </div>
                  </div>
@@ -97,7 +97,7 @@ const Thirdproject =()=> {
                    </svg>
                  </div>
                  <div>
-                   <div className='my-0 font-small dark:text-white'>
+                   <div className='my-0 font-small text-gray'>
                      HTML / Css / Sass / Javascript / ESC6 / Frameworks as Bootstrap or tailwind and More ui & ux
                    </div>
                  </div>
@@ -122,7 +122,7 @@ const Thirdproject =()=> {
                    </svg>
                  </div>
                  <div>
-                   <div className='my-0 font-small dark:text-white'>
+                   <div className='my-0 font-small text-gray'>
                      React js / Node js  / API calls / Supabase 
                    </div>
                  </div>
