@@ -3,6 +3,7 @@ import videon from '../assets/imgs/Nala.mp4'
 import { BentoGridThirdDemo } from "../components/BentoGridThirdDemo";
 import { CardStackDemo } from "../components/CardStackDemo";
 import whatsapp from '../assets/imgs/whatsapp1.png'
+import { CommandDialogDemo } from "../components/CommandDialogDemo";
 
 function Home() {
   return (
@@ -44,6 +45,9 @@ function Home() {
                <span className='subheading-anchor' id='Testimony'></span>
                <a href='#Testimony' className='anchor text-current no-underline no-outline'>Boost your ideas with us<span className='anchor-icon' aria-hidden='true'>#</span></a>
              </h2>
+             <div className='hidden ...'>
+             <CommandDialogDemo />
+             </div>
              <BentoGridThirdDemo />
              <CardStackDemo />
              <div

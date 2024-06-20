@@ -1,7 +1,6 @@
-// CardStackDemo.jsx
 import React from 'react';
 import { CardStack } from '../CardStack';
-import { cn } from '../utils/cn'; // Ajusta esta importación según la ubicación de tu archivo `cn.js`
+import { cn } from '../utils/cn'; 
 
 export function CardStackDemo() {
   return (
@@ -11,7 +10,6 @@ export function CardStackDemo() {
   );
 }
 
-// Small utility to highlight the content of a specific section of a testimonial content
 export const Highlight = ({ children, className }) => {
   return (
     <span
