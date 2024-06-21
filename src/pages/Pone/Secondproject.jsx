@@ -5,6 +5,7 @@ import videon2 from '../../assets/imgs/nala-add.mp4'
 import {AccordionDemo} from '../../components/Accordion'
 import {SelectForm} from '../../components/SelectForm'
 import { Toaster } from "../../components/ui/toaster";
+import { CommandDialogDemo } from '../../components/CommandDialogDemo'
 
 function Secondproject({ children }) {
   return (
@@ -59,6 +60,9 @@ function Secondproject({ children }) {
                  ,At the same time, Here you will find the different technologies that we use for the FrontEnd
                  as well as the BackEnd and the different tools that we use for the development of the projects.
              </p>
+             <div className='hidden ...'>
+             <CommandDialogDemo />
+             </div>
             <h3>Software development Technologies Implemented to build your digital dreams:</h3>
              <div className='grid grid-cols-1 gap-3 my-12'>
               <AccordionDemo />

@@ -1,6 +1,7 @@
 import React from 'react'
 import express from '../../assets/imgs/imagerepo1.webp'
 import expresstwo from '../../assets/imgs/imagenrepo4.webp'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Performancepatterns = () => {
   return (
@@ -56,6 +57,9 @@ const Performancepatterns = () => {
              to build Web Applications: As JavaScript is used for adding interactivity and automation to websites. So, if you want your web application to be anything more than just a static page of contents, you'll probably need to do some <code>JavaScript's</code>
              Also to build the <code>Back-end</code> Web Development: JavaScript has traditionally been used for developing the <code>front-end</code> parts of a web application. However, with the introduction of <code>NodeJS</code>, a prevalent <code>back-end</code> JavaScript framework, things have changed. And now, JavaScript is used for developing the back-end structure also.
              </p>
+             <div className='hidden ...'>
+                  <CommandDialogDemo />
+             </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={expresstwo} alt="img" className="will-change hover:animate-bounce" height="500" width="800" />

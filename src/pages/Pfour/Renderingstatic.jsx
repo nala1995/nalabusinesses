@@ -1,6 +1,7 @@
 import React from 'react'
 import finalimg from '../../assets/imgs/imagenrepo10.webp'
 import finalphoto from '../../assets/imgs/renderingtwo.jpg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Renderingstatic = () => {
   return (
@@ -60,7 +61,10 @@ const Renderingstatic = () => {
              <h3>Icon web fonts</h3>
              If possible avoid icon web fonts and use compressed <code>SVGs</code>. To further optimize inline your SVG data within HTML markup to avoid <code>HTTP requests</code>.
              </p>
-             <br></br> 
+             <br></br>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div> 
              <h2><span className="subheading-anchor" id="Tools"></span>
              <a href="#Tools" className="anchor text-current no-underline no-outline"> Tools <span className="anchor-icon" aria-hidden="true">#</span></a>
              </h2>

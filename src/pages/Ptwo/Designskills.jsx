@@ -1,6 +1,7 @@
 import React from 'react'
 import repoimg from '../../assets/imgs/imagenrepo9.jpg'
 import reactslog from '../../assets/imgs/Reactslogan.png'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Designskills = () => {
   return (
@@ -43,6 +44,9 @@ const Designskills = () => {
              <p>
              React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial. React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple <code>HTML page</code>, or start a complex <code>React-powered</code> app, the links in this section will help you get started.  
              </p>
+             <div className='hidden ...'>
+              <CommandDialogDemo />
+             </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={repoimg} alt="img" className="will-change" height="500" width="800" />

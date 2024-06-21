@@ -1,6 +1,7 @@
 import React from 'react'
 import repone from '../../assets/imgs/React.png'
 import repotwo from '../../assets/imgs/imagenrepo14.webp'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Firsdesign = () => {
   return (
@@ -40,6 +41,9 @@ const Firsdesign = () => {
              Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called <code>components</code> that contain both. We will come back to components in a further section, but if you're not yet comfortable putting markup in <code>JS</code>, this talk might convince you otherwise.
              React doesn't require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
              <br></br>
            <h1>JSX is an Expression Too</h1>
              <h2>

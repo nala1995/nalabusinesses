@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../assets/tailwind.css'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 function Fail() {
   return (
@@ -35,6 +36,9 @@ function Fail() {
             <button type="button"  className="text-red  hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
                 <a href='./Shopping'>Try again</a>
             </button>
+        </div>
+        <div className='hidden ...'>
+             <CommandDialogDemo />
         </div>
     </div>
   )

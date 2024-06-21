@@ -1,6 +1,7 @@
 import React from 'react'
 import pagethree from '../../assets/imgs/repothree.png'
 import pagethrees from '../../assets/imgs/reactexample.png'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Thirdesign=()=> {
   return (
@@ -60,6 +61,9 @@ const Thirdesign=()=> {
               Remember Don't be afraid to split components into smaller components.
               Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times <code>Button, Panel, Avatar</code>, or is complex enough on its own <code>App, FeedStory, Comment</code>, it is a good candidate to be extracted to a separate component.
               </p>
+              <div className='hidden ...'>
+                  <CommandDialogDemo />
+              </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={pagethrees} alt="img" className="will-change animated-pulse" height="500" width="800" />

@@ -1,6 +1,7 @@
 import React from 'react'
 import newthre from '../../assets/imgs/renderingimg.jpg'
 import newestimg from '../../assets/imgs/renderingthree.jpg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Renderingclient = () => {
   return (
@@ -38,6 +39,9 @@ const Renderingclient = () => {
              </h2>
              That's it for now; we hope our brief overview of the web performance topic helped you to get an idea of what it is all about, and made you excited to learn more. Next up we'll look at perceived performance, and how you can use some clever techniques to make some unavoidable performance hits appear less severe to the user, or disguise them completely.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
              <br></br>             
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">

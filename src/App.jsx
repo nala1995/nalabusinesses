@@ -23,6 +23,7 @@ import Renderingstatic from '../src/pages/Pfour/Renderingstatic'
 import Shoppingpage from '../src/pages/Pshop/Shopping.jsx'
 import Success from '../src/pages/Pshop/Success.jsx'
 import Fail from '../src/pages/Pshop/Fail.jsx'
+import Activism from '../src/pages/Pone/Activism.jsx'
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
             <Route path='/Shopping' element={<Shoppingpage />} />
             <Route path='/Success' element={<Success />} />
             <Route path='/Fail' element={<Fail />} />
+            <Route path='/Activism' element={<Activism />} />
          </Routes>
     </>
   )

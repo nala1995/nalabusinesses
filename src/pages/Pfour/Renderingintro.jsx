@@ -1,6 +1,7 @@
 import React from 'react'
 import otherimg from '../../assets/imgs/imagenrepo14.webp'
 import anyimg from '../../assets/imgs/imagenrepo12.webp'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Renderingintro = () => {
   return (
@@ -43,6 +44,9 @@ const Renderingintro = () => {
              </h2>
              To summarize, many features impact performance including latency, application size, the number of <code>DOM nodes</code>, the number of resource requests made, <code>JavaScript performance</code>, <code>CPU load</code>, and more. It is important to minimize the loading and response times, and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
              <br></br>             
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">

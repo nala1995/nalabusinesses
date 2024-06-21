@@ -2,6 +2,7 @@ import React from 'react'
 import lastimg from '../../assets/imgs/lastimg.jpg'
 import lasting from '../../assets/imgs/lasting.jpg'
 import newasset from '../../assets/imgs/newrender.mp4'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Fivedesign =() => {
   return (
@@ -52,6 +53,9 @@ const Fivedesign =() => {
              <p>
               You can find a lot of resources about tech and learn a lot, I recommend you to visit this website, it's very useful and you can find a lot of information about tech and you can learn a lot, the <code>aim</code> to hightligh this <code>resource</code> is to show you that you can find several things for free and impro everyday then just take the initiative to to it I bet you will achieve it.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                <video src={newasset} alt='video/mp4' className='will-change' autoPlay='autoplay' loop='loop' muted='muted' playsInline='playsinline' height='500' width='800' style={{position:'relative'}}/>

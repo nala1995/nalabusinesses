@@ -1,5 +1,6 @@
 import React from 'react'
 import profileimg from '../../assets/imgs/fm-logo.png'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Thirdproject =()=> {
   return (
@@ -68,6 +69,9 @@ const Thirdproject =()=> {
                  <div>
                    <div className='my-0 font-small text-gray'>
                      SAP ERP / Warehouse modules inbound / Microsoft Tools Advanced / Power Bi  
+                   </div>
+                   <div className='hidden ...'>
+                      <CommandDialogDemo />
                    </div>
                  </div>
                </div>

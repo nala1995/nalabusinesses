@@ -1,6 +1,7 @@
 import React from 'react'
 import triky from '../../assets/imgs/imagenrepo9.jpg'
 import triki from '../../assets/imgs/newreact.png'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Dynamicimport = () => {
   return (
@@ -54,6 +55,9 @@ const Dynamicimport = () => {
              An expression evaluated after each pass through the loop. If condition evaluates to true, the statement is re-executed. When condition evaluates to false, control passes to the statement following the <code>do...while</code>.
              In some cases, it can make sense to use an assignment as a condition, but when you do, there's a right way to do it, and a wrong way; the while documentation has a Using an assignment as a condition section with an example showing a general best-practice syntax you should know about and follow.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
              <br></br>
              <h2>
                <span className="subheading-anchor" id="Conclusion"></span>

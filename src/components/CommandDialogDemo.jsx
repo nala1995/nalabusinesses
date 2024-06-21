@@ -46,19 +46,137 @@ export function CommandDialogDemo() {
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Suggestions">
+          <CommandGroup heading="Main Menu">
+            <a className="cursor-pointer" href="/Introduction" >
             <CommandItem>
-              <CalendarIcon className="mr-2 h-4 w-4" />
-              <span>Calendar</span>
+              <FaceIcon className="mr-7 h-4 w-4" />
+              <span> Introduction </span>
             </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Firstproject" >
             <CommandItem>
-              <FaceIcon className="mr-2 h-4 w-4" />
-              <span>Introduction</span>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Ecommerce </span>
             </CommandItem>
-            <a className="cursor-pointer ..." href="/Shopping" >
+            </a>
+            <a className="cursor-pointer" href="/Secondproject" >
             <CommandItem>
-              <RocketIcon className="mr-2 h-4 w-4" />
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Nala Business </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Thirdproject" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Our Team </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Fourproject" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> The aesthetic Design </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Fiveproject" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> UX / UI Design </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Finalmodule" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Performance </span>
+            </CommandItem>
+            </a>
+            </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Shopping">  
+            <a className="cursor-pointer" href="/Shopping" >
+            <CommandItem>
+              <RocketIcon className="mr-7 h-4 w-4" />
               <span>Shop</span>
+            </CommandItem>
+            </a>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Learning React JS">
+            <a className="cursor-pointer" href="/Designskills" >
+            <CommandItem>
+              <FaceIcon className="mr-7 h-4 w-4" />
+              <span> Introduction to React </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Firstdesign" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> JSX language </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Secondesign" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Rendering </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Thirdesign" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Components & Props </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Fourdesign" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> States </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Fivedesign" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Events & More </span>
+            </CommandItem>
+            </a>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Learning Javascript">
+            <a className="cursor-pointer" href="/Performancepatterns" >
+            <CommandItem>
+              <FaceIcon className="mr-7 h-4 w-4" />
+              <span> Starting with JS </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Staticimport" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> JS Topics and patterns </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Dynamicimport" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> JS Arrays & More </span>
+            </CommandItem>
+            </a>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Performance">
+            <a className="cursor-pointer" href="/Renderingintro" >
+            <CommandItem>
+              <FaceIcon className="mr-7 h-4 w-4" />
+              <span> Starting with performance </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Renderingclient" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Rendering Right </span>
+            </CommandItem>
+            </a>
+            <a className="cursor-pointer" href="/Renderingstatic" >
+            <CommandItem>
+              <CalendarIcon className="mr-7 h-4 w-4" />
+              <span> Final Recomendations </span>
             </CommandItem>
             </a>
           </CommandGroup>

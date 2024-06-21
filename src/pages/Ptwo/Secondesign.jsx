@@ -1,6 +1,7 @@
 import React from 'react'
 import newreact from '../../assets/imgs/newreact.png'
 import imagenrepo from '../../assets/imgs/imagenrepo5.webp'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Secondesign =()=> {
   return (
@@ -51,6 +52,9 @@ const Secondesign =()=> {
              Even though we create an element describing the whole <code>UI tree</code> on every <code>tick</code>, only the <code>text node</code> whose contents have changed gets updated by <code>React DOM</code>.
              In our experience, thinking about how the <code>UI</code> should look at any given moment, rather than how to change it over time, eliminates a whole class of <code>bugs</code>.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={imagenrepo} alt="img" className="will-change" height="500" width="800" />

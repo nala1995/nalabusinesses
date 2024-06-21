@@ -1,6 +1,7 @@
 import React from 'react'
 import imgge from '../../assets/imgs/imagen3.jpg';
 import imgge2 from '../../assets/imgs/react-ecommerce-tutorial.webp';
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Firstproject = () => {
   return (
@@ -33,6 +34,9 @@ const Firstproject = () => {
              </div>
              <br></br>
            <h1>Consider testing your ecommerce website or marketplace</h1>
+           <div className='hidden ...'>
+             <CommandDialogDemo />
+           </div>
              <h2>
                <span className="subheading-anchor" id="Suggestion"></span>
                <a href="#Suggestion" className="anchor text-current no-underline no-outline">Suggestion<span className="anchor-icon" aria-hidden="true">#</span></a>

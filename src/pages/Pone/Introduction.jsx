@@ -1,6 +1,7 @@
 import React from 'react'
 import picture from '../../assets/imgs/imagen1.jpg'
 import intropic from '../../assets/imgs/imagen2.jpg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 function Introduction() {
   return (
@@ -49,6 +50,9 @@ function Introduction() {
              The languages and technologies that I've used are <code>HTML</code> and <code>CSS</code> for the frontend and <code>Javascript</code> for the backend as well as <code>React</code> as framework language, but I will also talk about other technologies that I have used to build this website with is built with React mainly but uses the technologies previously named.
              On the other hand I will also talk about the <code>E-business</code> and business initiative which is the creation of a brand called <code>Nala Business</code>, This brand is intended to be an online service to help a diverse groups who can be interested on build or be advised on ecommerce matters or developement matters.
              </p>
+             <div className='hidden ...'>
+             <CommandDialogDemo />
+             </div>
               </div>
              <div className='mt-16'></div>
              <div

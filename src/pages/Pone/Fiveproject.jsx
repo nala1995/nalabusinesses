@@ -1,6 +1,7 @@
 import React from 'react'
 import picturfour from '../../assets/imgs/alarmclock.gif'
 import picturefive from '../../assets/imgs/giphyone.gif'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Fiveproject =() => {
   return (
@@ -46,6 +47,9 @@ const Fiveproject =() => {
               <li>Image zooming with double-tap gesture must be there</li>
               <li>Always look to analyze and test the user behavior for future references</li>
              </p>
+            <div className='hidden ...'>
+             <CommandDialogDemo />
+            </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={picturefive} alt="gif" className="rounded will-change" height="500" width="800" />

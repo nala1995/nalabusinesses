@@ -1,6 +1,7 @@
 import React from 'react'
 import pictureone from '../../assets/imgs/aesthetic1.jpg'
 import picturetwo from '../../assets/imgs/aesthetic2.jpg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Fourproject = ()=> {
   return (
@@ -44,6 +45,9 @@ const Fourproject = ()=> {
               It is important to make sure a website is user friendly to allow for a fluid journey from start to finish. The last thing you want is for a customer to go on your website and not know where they are going and have to search for it. Make sure everything is easy to find and it is in a way that it flows. This includes simple navigation, CTAs that show where a customer can go next, clear links for information pages such as FAQs and the contact page.
               Being mobile friendly is important, so a responsive website is another point to consider when thinking about UX and eCommerce web design. You need to make sure that when your website is seen on mobile and tablet devices, it looks good. Remember the website will be seen on a smaller screen, so include large <code>CTAs</code> that are easy to click, clear and concise writing and a condensed menu to save space, such as using a burger menu and icons for cart and account pages.
              </p>
+            <div className='hidden ...'>
+             <CommandDialogDemo />
+            </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={picturetwo} alt="img" className="rounded-r-full will-change" height="500" width="800" />

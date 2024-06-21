@@ -1,6 +1,7 @@
 import React from 'react'
 import pictureinvented from '../../assets/imgs/lionessnew.jpeg'
 import pictureinventedtwo from '../../assets/imgs/colombian.jpeg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Finalmodule = () => {
   return (
@@ -41,6 +42,9 @@ const Finalmodule = () => {
              Thanks to load testing, you can check whether the website performs as expected under normal and anticipated peak load conditions as well. All system lags, page load issues can be easily detected in the testing environment. 
              Besides, passing functional tests does not mean that all the functions can perform the same under any stress of user load. This is another point that explains the importance of load testing. 
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
              <h2>
                <span className="subheading-anchor" id="ScalabilityTesting"></span>
                <a href="#ScalabilityTesting" className="anchor text-current no-underline no-outline">SCALABILITY TESTING<span className="anchor-icon" aria-hidden="true">#</span></a>

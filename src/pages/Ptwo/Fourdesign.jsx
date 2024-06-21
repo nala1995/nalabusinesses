@@ -1,6 +1,7 @@
 import React from 'react'
 import Newsection from '../../assets/imgs/Newsection.jpg'
 import Newsect from '../../assets/imgs/Newsectiontwo.jpg'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Fourdesign = () => {
   return (
@@ -56,6 +57,9 @@ const Fourdesign = () => {
              <p>
              Other thing to take in consideration, In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time. You can use stateless components inside stateful components, and vice versa.
              </p>
+             <div className='hidden ...'>
+                <CommandDialogDemo />
+             </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1">
                  <img src={Newsect} alt="img" className="will-change" height="500" width="800" />

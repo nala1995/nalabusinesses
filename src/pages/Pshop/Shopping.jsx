@@ -13,6 +13,7 @@ import foreign from '../../assets/imgs/Foreign.jpeg'
 import marketing from '../../assets/imgs/marketing.jpeg'
 import supplych from '../../assets/imgs/supplych.jpeg'
 import CardPopup from '../../components/CardPopup'
+import { CommandDialogDemo } from '../../components/CommandDialogDemo'
 
 const cardData = [
   {
@@ -187,6 +188,9 @@ const Shopping = ()=> {
              <p>
               Buy our services and undertake a journey to the future of commerce. 
              </p>
+            <div className='hidden ...'>
+             <CommandDialogDemo />
+            </div>
             <div className="w-auto px-2 pt-16 pb-8 mx-auto sm:pt-24 lg:px-8">
                <div className="w-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
                {cardData.map((card) => (

@@ -1,6 +1,7 @@
 import React from 'react'
 import oblivion from '../../assets/imgs/imagenrepo13.webp'
 import obliviontwo from '../../assets/imgs/imagenrepo2.webp'
+import {CommandDialogDemo} from '../../components/CommandDialogDemo'
 
 const Staticimport = () => {
   return (
@@ -98,6 +99,9 @@ const Staticimport = () => {
            <p>
            The filter method will filter out the elements of an array based on the specified test condition. It will iterate through all the elements and imply the test condition on them. It will then return a new array of elements that will pass the condition.
            </p>
+            <div className='hidden ...'>
+                <CommandDialogDemo />
+            </div>
              <h2>
                <span className="subheading-anchor" id="Loops"></span>
                <a href="#Loops" className="anchor text-current no-underline no-outline">Talking about loops in JS<span className="anchor-icon" aria-hidden="true">#</span></a>
