@@ -42,49 +42,49 @@ export function CommandDialogDemo() {
           <span className="text-xs">⌘</span>J
         </kbd>
       </p>
-      <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandDialog className='shadow-indigo-500' open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Main Menu">
-            <a className="cursor-pointer" href="/Introduction" >
-            <CommandItem>
+            <a className="cursor-pointer hover:bg-sky-700" href="/Introduction" >
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <FaceIcon className="mr-7 h-4 w-4" />
               <span> Introduction </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Firstproject" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Ecommerce </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Secondproject" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Nala Business </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Thirdproject" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Our Team </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Fourproject" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> The aesthetic Design </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Fiveproject" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> UX / UI Design </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Finalmodule" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Performance </span>
             </CommandItem>
@@ -93,7 +93,7 @@ export function CommandDialogDemo() {
           <CommandSeparator />
           <CommandGroup heading="Shopping">  
             <a className="cursor-pointer" href="/Shopping" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <RocketIcon className="mr-7 h-4 w-4" />
               <span>Shop</span>
             </CommandItem>
@@ -102,37 +102,37 @@ export function CommandDialogDemo() {
           <CommandSeparator />
           <CommandGroup heading="Learning React JS">
             <a className="cursor-pointer" href="/Designskills" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <FaceIcon className="mr-7 h-4 w-4" />
               <span> Introduction to React </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Firstdesign" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> JSX language </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Secondesign" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Rendering </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Thirdesign" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Components & Props </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Fourdesign" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> States </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Fivedesign" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Events & More </span>
             </CommandItem>
@@ -141,19 +141,19 @@ export function CommandDialogDemo() {
           <CommandSeparator />
           <CommandGroup heading="Learning Javascript">
             <a className="cursor-pointer" href="/Performancepatterns" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <FaceIcon className="mr-7 h-4 w-4" />
               <span> Starting with JS </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Staticimport" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> JS Topics and patterns </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Dynamicimport" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> JS Arrays & More </span>
             </CommandItem>
@@ -168,13 +168,13 @@ export function CommandDialogDemo() {
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Renderingclient" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Rendering Right </span>
             </CommandItem>
             </a>
             <a className="cursor-pointer" href="/Renderingstatic" >
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <CalendarIcon className="mr-7 h-4 w-4" />
               <span> Final Recomendations </span>
             </CommandItem>
@@ -182,17 +182,19 @@ export function CommandDialogDemo() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Settings">
-            <CommandItem>
+            <a className="cursor-pointer" href="/Activism" >
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <PersonIcon className="mr-2 h-4 w-4" />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
+              <span>Activism</span>
+              <CommandShortcut>⌘</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            </a>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
               <span>Mail</span>
               <CommandShortcut>⌘B</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem className='cursor-pointer hover:bg-slate-900 rounded-md shadow-slate-950'>
               <GearIcon className="mr-2 h-4 w-4" />
               <span>Settings</span>
               <CommandShortcut>⌘S</CommandShortcut>

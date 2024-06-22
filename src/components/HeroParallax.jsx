@@ -7,25 +7,28 @@ import {
 } from "framer-motion";
 
 const HeroParallax = ({ products }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const rows = chunkArray(products, 4); 
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
-  );
-  const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
-  );
+  const createContinuousTranslate = (direction = "normal") => {
+    const fromX = direction === "reverse" ? 200 : -200;
+    const toX = direction === "reverse" ? -200 : 200;
+    const translateX = useSpring(
+      useTransform(scrollYProgress, [0, 1], [fromX, toX]),
+      springConfig
+    );
+    return translateX;
+  };
+
+  const translateX = createContinuousTranslate("normal");
+  const translateXReverse = createContinuousTranslate("reverse");
+
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
     springConfig
@@ -39,14 +42,14 @@ const HeroParallax = ({ products }) => {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-800, 400]), // Ajusta los valores aquí
     springConfig
   );
 
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="min-h-[300vh] py-40 pb-60 overflow-hidden antialiased relative flex flex-col items-center [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -57,33 +60,27 @@ const HeroParallax = ({ products }) => {
           opacity,
         }}
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-20">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
+        {rows.map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className="flex flex-wrap justify-center mb-5 max-w-screen-lg mx-auto"
+          >
+            {row.map((product, index) => (
+              <ProductCard
+                key={product.title}
+                product={product}
+                translate={rowIndex % 2 === 0 ? translateX : translateXReverse}
+              />
+            ))}
+            {/* Rellena con placeholders si la fila tiene menos de 2 imágenes */}
+            {row.length < 2 && (
+              <>
+                <div className="flex-1"></div>
+                <div className="flex-1"></div>
+              </>
+            )}
+          </div>
+        ))}
       </motion.div>
     </div>
   );
@@ -92,10 +89,10 @@ const HeroParallax = ({ products }) => {
 const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <h1 className="text-2xl md:text-7xl font-bold text-grey-300">
         The Ultimate <br /> development studio
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-900">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products.
@@ -113,14 +110,11 @@ const ProductCard = ({ product, translate }) => {
       whileHover={{
         y: -20,
       }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-72 relative flex-shrink-0 m-4"
     >
       <a href={product.link} className="block group-hover/product:shadow-2xl">
         <img
           src={product.thumbnail}
-          height="600"
-          width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
@@ -132,5 +126,17 @@ const ProductCard = ({ product, translate }) => {
     </motion.div>
   );
 };
+
+
+function chunkArray(array, size) {
+  return array.reduce((chunks, item, index) => {
+    if (index % size === 0) {
+      chunks.push([item]);
+    } else {
+      chunks[chunks.length - 1].push(item);
+    }
+    return chunks;
+  }, []);
+}
 
 export default HeroParallax;

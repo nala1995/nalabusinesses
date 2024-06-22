@@ -40,7 +40,7 @@ const CARDS = [
     designation: "Senior Ethical Hacker",
     content: (
       <p>
-        I don't to contract external services to implement an ecommerce, <Highlight>I prefer to build an independant one as Nala offer</Highlight> because will have freedom to use what you want.<Highlight>My company stand out for companies like this one</Highlight> so don't hesitate and do it with them.
+        I don't contract external services to implement an ecommerce, <Highlight>I prefer to build an independant one as Nala offer</Highlight> because will have freedom to use what you want.<Highlight>My company stand out for companies like this one</Highlight> so don't hesitate and do it with them.
       </p>
     ),
   },

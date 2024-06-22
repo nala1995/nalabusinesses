@@ -307,11 +307,11 @@ const SkeletonFour = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2 backdrop-blur-3xl"
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl dark:bg-black ():bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-transparent p-4 dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center backdrop-blur-3xl shadow-lg shadow-indigo-500/50"
       >
         <img
           src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
@@ -327,7 +327,7 @@ const SkeletonFour = () => {
           1st Customer
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-transparent p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center backdrop-blur-3xl shadow-lg shadow-indigo-500/50">
         <img
           src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/460x307/9/8/2/533982_webpicsc_199996.jpg"
           alt="avatar"
@@ -344,7 +344,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl dark:bg-black []:bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-transparent []:bg-white p-4 dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center backdrop-blur-3xl shadow-lg shadow-indigo-500/50"
       >
         <img
           src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjEwMzQtZWxlbWVudC0wNi0zOTcucG5n.png"
@@ -366,7 +366,7 @@ const SkeletonFour = () => {
 
 export function BentoGridThirdDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] shadow-lg shadow-indigo-500/50">
       <BentoGridItem
         title="Testimonial"
         description={(

@@ -60,11 +60,11 @@ export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText
   return (
     <MouseEnterProvider>
       <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black bg-transparent dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.5] bg-transparent dark:border-white/[0.1]   w-auto sm:w-[30rem] h-auto rounded-xl p-6 border backdrop-blur-3xl">
           <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 text-black-950">
             {title}
           </CardItem>
-          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 text-neutral-900">
             {description}
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
@@ -81,7 +81,7 @@ export function ThreeDCardDemo({ title, description, imageUrl, price, buttonText
               {currency}
               {price}
             </CardItem>
-            <CardItem translateZ={20} as="button" className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-xs font-bold" onClick={onClick}>
+            <CardItem translateZ={20} as="button" className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-xs font-bold text-neutral-900" onClick={onClick}>
               {buttonText}
             </CardItem>
           </div>
