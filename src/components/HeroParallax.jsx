@@ -90,12 +90,11 @@ const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-grey-300">
-        The Ultimate <br /> development studio
+        Environmental crimes <br /> in Colombia.
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-900">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      In the whole Colombia's history period the inner conflict has taken a huge center stage, without shadow of doubt the most affected have been the rural population and the local ecosystems, for one side we've got the locals who have been intimidated or killed, if they didn't have the same lucky as the others, since a lot of time ago, as they have been involved unwilling to be but for living and making their lands be respected against those who only wanted to take advantage of an illegal business. on the other side we've got the lands and ecosystems that have been exploted by organized groups controlled or supported by political strenghts and politicians with power.
+      ... 
       </p>
     </div>
   );

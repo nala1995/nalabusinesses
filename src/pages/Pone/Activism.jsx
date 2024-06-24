@@ -12,14 +12,14 @@ import damages4 from '../../assets/imgs/damages4.jpeg';
 
 const Activism = () => {
   const products = [
-    { title: 'Boyaca, -belencito', link: '/product1', thumbnail: actimg1 },
-    { title: 'Choco - timbiqui', link: '/product2', thumbnail: actimg2 },
-    { title: 'Bolivar -la meseta', link: '/product3', thumbnail: actimg3 },
-    { title: 'Product 4', link: '/product4', thumbnail: actimg4 },
-    { title: 'Product 5', link: '/product5', thumbnail: damages1 },
-    { title: 'Product 6', link: '/product6', thumbnail: damages2 },
-    { title: 'Product 7', link: '/product7', thumbnail: damages3 },
-    { title: 'Product 8', link: '/product8', thumbnail: damages4 },
+    { title: 'Risaralda, -Mistrato', link: 'https://ciudadregion.com/regiones/risaralda/capturados-por-mineria-ilegal-mistrato-risaralda_1376711447', thumbnail: actimg1 },
+    { title: 'Risaralda, -Pereira, Dos quebradas', link: 'https://revistaraya.com/calzones-el-poderoso-aliado-de-uribe-es-un-narco-para-la-fiscalia.html', thumbnail: actimg2 },
+    { title: 'Risaralda, -Pereira', link: 'https://www.pares.com.co/post/qu%C3%A9-es-y-de-d%C3%B3nde-viene-el-grupo-la-cordillera', thumbnail: actimg3 },
+    { title: 'Bagado (CHOCO), -Resguardo Indigena del Alto Andágueda', link: 'https://www.unidadvictimas.gov.co/especiales/AltoDeAndagueda/index.html', thumbnail: actimg4 },
+    { title: 'Camalito, -Rio Cauca', link: 'https://ligacontraelsilencio.com/2019/05/07/miedo-y-silencio-causa-el-negocio-de-la-arena-en-risaralda/', thumbnail: damages1 },
+    { title: 'Amazonas, -Rio caqueta', link: 'https://rutasdelconflicto.com/notas/mineria-ilegal-el-rio-caqueta-continua-el-peligro-los-indigenas-amazonicos-colombia', thumbnail: damages2 },
+    { title: 'Amazonas, Resguardo Indigena Inga de Yurayaco', link: 'https://blogs.elespectador.com/medio-ambiente/mongabay-latam/la-marginal-la-selva-la-carretera-trae-deforestacion-narcotrafico-violencia-las-puertas-del-resguardo-inga-yurayaco/', thumbnail: damages3 },
+    { title: 'Putumayo, -Resguardo Indigena Inga', link: 'https://www.utadeo.edu.co/es/articulo/crossmedialab/277626/el-resguardo-de-los-indigenas-inga-del-putumayo-en-el-que-entran-todos-menos-ellos', thumbnail: damages4 },
     // ...más productos
   ];
 
