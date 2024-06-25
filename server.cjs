@@ -1,6 +1,7 @@
 const express = require('express');
 const Stripe = require('stripe');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
@@ -8,6 +9,16 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY_API);
 
 app.use(cors());
 app.use(express.json());
+
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
 
 app.post('/create-checkout-session', async (req, res) => {
     const { stripeProductId } = req.body;
@@ -31,6 +42,24 @@ app.post('/create-checkout-session', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+app.post('/send-email', (req, res) => {
+    const { email, selectedValue } = req.body;
+  
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: 'nalabusiness1995@gmail.com',
+      subject: 'Solicitud de cotización',
+      text: `Se ha recibido una solicitud de cotización con la siguiente información:\n\nEmail: ${email}\nValor seleccionado: ${selectedValue}`
+    };
+  
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return res.status(500).send(error.toString());
+      }
+      res.status(200).send('Correo enviado: ' + info.response);
+    });
+  });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

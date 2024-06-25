@@ -9,8 +9,9 @@ import wix from "../assets/imgs/wix.svg"
 import prestashop from "../assets/imgs/prestashop.svg"
 import "../assets/main.css"
 import "../assets/tailwind.css"
-
-
+import amazon from "../assets/imgs/amazon.svg"
+import React, { useState } from 'react';
+import axios from 'axios';
 import { Button } from "../components/ui/button";
 import {
   Form,
@@ -44,7 +45,29 @@ export function SelectForm() {
     resolver: zodResolver(FormSchema),
   });
 
-  function onSubmit(data) {
+  const [selectedValue, setSelectedValue] = useState('');
+
+  async function onSubmit(data) {
+    const { email } = data;
+
+    try {
+      await axios.post('http://localhost:5000/send-email', {
+        email: email,
+        selectedValue: selectedValue
+      });
+    toast({
+      title: "Correo enviado",
+      description: `El correo se ha enviado a nalabusiness1995@gmail.com`,
+    });
+  } catch (error) {
+    toast({
+      title: "Error enviando el correo",
+      description: `Hubo un problema al enviar el correo: ${error.message}`,
+    });
+  }
+}
+
+  /* function onSubmit(data) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -53,7 +76,7 @@ export function SelectForm() {
         </pre>
       ),
     });
-  }
+  } */
 
   return (
     <Form {...form}>
@@ -65,11 +88,10 @@ export function SelectForm() {
             <FormItem>
               <FormLabel>eCommerce migrations or implementations</FormLabel>
               <FormDescription>
-                You can manage the platform you are interested in to {/* Ajustar Link si no usas Next.js */}
-                {/* <Link href="/examples/forms">email settings</Link>. */}
+                You can manage the platform you are interested in to 
                 <a href="/Shopping">Implement</a>.
               </FormDescription>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select onValueChange={(value) => setSelectedValue(value)}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select an option to display" />
@@ -112,6 +134,12 @@ export function SelectForm() {
                       <div className="mr-16">Wix</div>
                     </div>
                   </SelectItem>
+                  <SelectItem className="dwelling1" value="aws@nalabusiness.com">
+                    <div className="dwelling flex items-center justify-evenly space-x-2">
+                      <img className="h-6 w-6 ml-2 mr-22" alt="iconaws" src={amazon}/>
+                      <div className="mr-16">Amazon</div>
+                    </div>
+                  </SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -119,7 +147,7 @@ export function SelectForm() {
           )}
         />
       <div className="flex w-full max-w-sm items-center space-x-2">
-        <Input type="email" placeholder="Email" />
+        <Input type="email" placeholder="Email" {...form.register('email')} />
         <Button className="shadow-teal-800" type="submit">Subscribe</Button>
       </div>
       </form>
