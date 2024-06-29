@@ -14,36 +14,6 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-    }
-    
-    const toggledark = document.documentElement.className === ('dark');
-    const toggleTheme = document.documentElement.className === ('theme');
-    const toggleLight = document.documentElement.className === ('light');
-    
-    const twoDark = ()=> {
-      toggledark.value = document.documentElement.classList.toggle('dark');
-      toggledark.value 
-      ? (localStorage.theme = 'light')
-      : (localStorage.theme = 'dark');
-    }; 
-    const twoLight = ()=> {
-      toggleLight.value = document.documentElement.classList.toggle('dark');
-      toggleLight.value 
-      ? (localStorage.theme = 'dark')
-      : (localStorage.theme = 'light');
-    }; 
-    const twoSystem = ()=> {
-      toggleTheme.value = document.documentElement.classList.toggle('theme');
-      toggleTheme.value 
-      ? (localStorage.theme = 'dark')
-      : (localStorage.theme = 'light');
-    }; 
-    </script> -->
     <script>
       // Initial theme check on page load
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

@@ -2,6 +2,8 @@ const express = require('express');
 const Stripe = require('stripe');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 require('dotenv').config();
 
 const app = express();
@@ -60,6 +62,28 @@ app.post('/send-email', (req, res) => {
       res.status(200).send('Correo enviado: ' + info.response);
     });
   });
+
+  app.post('/create-wompi-checkout-session', (req, res) => {
+    try {
+      const { priceCOP, currencyCOP } = req.body;
+      const prefix = 'sk8-';
+      const uniqueReference = prefix + uuidv4();
+      const integrityKey = process.env.INTEGRITY_KEY; 
+      const currency = currencyCOP || 'COP';
+  
+      const concatenatedString = `${uniqueReference}${priceCOP}${currency}${integrityKey}`;
+      const hash = crypto.createHash('sha256').update(concatenatedString).digest('hex');
+  
+      res.json({
+        reference: uniqueReference,
+        signature: hash
+      });
+    } catch (error) {
+      console.error('Error creating session:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

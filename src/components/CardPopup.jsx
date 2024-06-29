@@ -2,35 +2,38 @@ import React, { useState, useEffect } from 'react';
 import Wompi from '../assets/imgs/Wompi.svg';
 import '../assets/main.css';
 import config from '../config';
-import generateHash from '../Hashing';
+/* import generateHash from '../Hashing'; */
 import PaypalLogic from '../Paypalogic';
 import logo from '../assets/imgs/Nala.png';
 import binancemc from '../assets/imgs/binancemc.svg';
 import StripeCheckoutButton from './StripeCheckoutButton';
+import axios from 'axios';
+/* import { v4 as uuidv4 } from 'uuid'; */
+
 
 
 const CardPopup = ({ title, description, imageUrl, price, currency, onClose, priceCOP, currencyCOP, id, stripeProductId }) => {
 
     const [signature, setSignature] = useState('');
     const publicKey = config.WOMPI_API_PUBLIC;
-    const Integritysign = config.INTEGRITY_KEY;
-    const reference = '37DNKF84S92N1S';
+    /* const Integritysign = config.INTEGRITY_KEY; */
+    const [reference, setReference] = useState('');
 
     useEffect(() => {
-      if (title && description && imageUrl && price && currency && priceCOP && currencyCOP) {
-          async function generateSignature() {
-              try {
-                  const generatedSignature = await generateHash(integrityKey, priceCOP, currencyCOP, reference);
-                  console.log("Generated Signature: ", generatedSignature);
-                  setSignature(generatedSignature);
-              } catch (error) {
-                  console.error('Error generating signature:', error);
-              }
+        if (title && description && imageUrl && price && currency && priceCOP && currencyCOP) {
+          async function fetchReferenceAndSignature() {
+            try {
+              const response = await axios.post('http://localhost:5000/create-wompi-checkout-session', {});
+              setReference(response.data.reference);
+              setSignature(response.data.signature);
+            } catch (error) {
+              console.error('Error generating signature:', error);
+            }
           }
-          generateSignature();
-      }
-    }, [title, description, imageUrl, price, currency, priceCOP, currencyCOP]);
-
+          fetchReferenceAndSignature();
+        }
+      }, [title, description, imageUrl, price, currency, priceCOP, currencyCOP]);
+    
     if (!title || !description || !imageUrl || !price || !currency || !priceCOP || !currencyCOP) {
         return null;
     }
@@ -52,7 +55,7 @@ const CardPopup = ({ title, description, imageUrl, price, currency, onClose, pri
                     <input type="hidden" name="public-key" value={publicKey} />
                     <input type="hidden" name="currency" value={currencyCOP} />
                     <input type="hidden" name="amount-in-cents" value={priceCOP} />
-                    <input type="hidden" name="reference" value="37DNKF84S92N1S" />
+                    <input type="hidden" name="reference" value={reference} />
                     <input type="hidden" name="signature:integrity" value={signature} />
                     <button className='wompi-btn' type="submit">
                       <img className='imgwompi' src={Wompi} alt="icon Wompi" />

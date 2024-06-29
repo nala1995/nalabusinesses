@@ -27,7 +27,7 @@ const cardData = [
     currencyCOP: "COP",
     buttonText: "Buy now",
     link: "https://twitter.com/mannupaaji",
-    stripeProductId: 'price_1P1v3DBL3mxlGG1nHOoNYabk'
+    stripeProductId: 'price_1P21l7BL3mxlGG1nAi0LxK3Q'
   },
   {
     id: 2,
