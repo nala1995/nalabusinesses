@@ -5,12 +5,14 @@ const nodemailer = require('nodemailer');
 const { v4: uuidv4 } = require('uuid');
 const crypto = require('crypto');
 require('dotenv').config();
+const path = require('path');
 
 const app = express();
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY_API);
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 const transporter = nodemailer.createTransport({
@@ -82,6 +84,10 @@ app.post('/send-email', (req, res) => {
       console.error('Error creating session:', error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
+  });
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
 

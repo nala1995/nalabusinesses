@@ -26,7 +26,7 @@ const cardData = [
     priceCOP: "1376214000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P21l7BL3mxlGG1nAi0LxK3Q'
   },
   {
@@ -39,7 +39,7 @@ const cardData = [
     priceCOP: "98301000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P21pIBL3mxlGG1nojIP7kGj'
   },
   {
@@ -52,7 +52,7 @@ const cardData = [
     priceCOP: "196602000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P21sHBL3mxlGG1nJCzklD73'
   },
   {
@@ -65,7 +65,7 @@ const cardData = [
     priceCOP: "98301000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P229HBL3mxlGG1ndvxcpsps'
   },
   {
@@ -78,7 +78,7 @@ const cardData = [
     priceCOP: "157281600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P22CeBL3mxlGG1ndW22fVuv'
   },
   {
@@ -91,7 +91,7 @@ const cardData = [
     priceCOP: "117961200",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P22FrBL3mxlGG1nX4yOzkpR'
   },
   {
@@ -104,7 +104,7 @@ const cardData = [
     priceCOP: "589806000",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P22MBBL3mxlGG1nW9pGzOdD'
   },
   {
@@ -117,7 +117,7 @@ const cardData = [
     priceCOP: "550485600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P22dbBL3mxlGG1noGaLoXcb'
   },
   {
@@ -130,10 +130,10 @@ const cardData = [
     priceCOP: "845388600",
     currencyCOP: "COP",
     buttonText: "Buy now",
-    link: "https://twitter.com/mannupaaji",
+    link: "link.mercadopago.com.co/nalabusiness",
     stripeProductId: 'price_1P22hBBL3mxlGG1nsLA9bQg4'
   },
-  // you can add more cards here hello there
+  // lets leave this here but you can put more cards if you want here.....
 ];
 
 const Shopping = ()=> {
