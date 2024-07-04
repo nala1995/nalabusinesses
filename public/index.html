@@ -15,16 +15,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
-      // Initial theme check on page load
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-  
-      // Function to set the system theme
       function setSystemTheme() {
-        localStorage.removeItem('theme'); // Remove theme preference
+        localStorage.removeItem('theme'); 
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           document.documentElement.classList.add('dark');
         } else {
@@ -32,7 +29,6 @@
         }
       }
   
-      // Function to toggle between dark and light themes
       function toggleTheme() {
         if (document.documentElement.classList.contains('dark')) {
           document.documentElement.classList.remove('dark');

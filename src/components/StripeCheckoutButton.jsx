@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 import config from '../config.js';
 
-const stripePromise = loadStripe(config.STRIPE_PUBLIC_KEY_API);
+const stripePromise = loadStripe(config.REACT_APP_STRIPE_PUBLIC_KEY_API);
 
 const StripeCheckoutButton = ({ stripeProductId }) => {
   const handleStripeCheckout = async () => {

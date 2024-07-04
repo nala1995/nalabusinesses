@@ -2,20 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Wompi from '../assets/imgs/Wompi.svg';
 import '../assets/main.css';
 import config from '../config';
-/* import generateHash from '../Hashing'; */
 import PaypalLogic from '../Paypalogic';
 import logo from '../assets/imgs/Nala.png';
 import binancemc from '../assets/imgs/binancemc.svg';
 import StripeCheckoutButton from './StripeCheckoutButton';
 import axios from 'axios';
-/* import { v4 as uuidv4 } from 'uuid'; */
 
 
 
 const CardPopup = ({ title, description, imageUrl, price, currency, onClose, priceCOP, currencyCOP, id, stripeProductId }) => {
 
     const [signature, setSignature] = useState('');
-    const publicKey = config.WOMPI_API_PUBLIC;
+    const publicKey = config.REACT_APP_WOMPI_API_PUBLIC;
     /* const Integritysign = config.INTEGRITY_KEY; */
     const [reference, setReference] = useState('');
 

@@ -80,13 +80,13 @@ export default PaypalLogic;
 // PaypalLogic.jsx
 import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
-import config from './config';
+import config from './config.js';
 
 function PaypalLogic({ productId, productQuantity, price, currency }) {
   const [message, setMessage] = useState('');
 
   const initialOptions = {
-    'client-id': config.PAYPAL_PUBLIC_KEY, // Utilizando el Client ID desde config.js
+    'client-id': config.REACT_APP_PAYPAL_PUBLIC_KEY, // Utilizando el Client ID desde config.js
     'enable-funding': 'venmo',
     currency: currency,
     'data-page-type': 'product-details',

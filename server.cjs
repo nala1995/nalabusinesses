@@ -8,7 +8,7 @@ require('dotenv').config();
 const path = require('path');
 
 const app = express();
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY_API);
+const stripe = Stripe(process.env.REACT_APP_STRIPE_SECRET_KEY_API);
 
 app.use(cors());
 app.use(express.json());
@@ -37,8 +37,8 @@ app.post('/create-checkout-session', async (req, res) => {
                 quantity: 1,
             }],
             mode: 'payment',
-            success_url: 'http://localhost:5001/Success', 
-            cancel_url: 'http://localhost:5001/Fail', 
+            success_url: 'http://localhost:3000/Success', 
+            cancel_url: 'http://localhost:3000/Fail', 
         });
         res.json({ id: session.id });
     } catch (error) {
@@ -51,7 +51,7 @@ app.post('/send-email', (req, res) => {
     const { email, selectedValue } = req.body;
   
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: process.env.REACT_APP_EMAIL_USER,
       to: 'nalabusiness1995@gmail.com',
       subject: 'Solicitud de cotización',
       text: `Se ha recibido una solicitud de cotización con la siguiente información:\n\nEmail: ${email}\nValor seleccionado: ${selectedValue}`
@@ -70,7 +70,7 @@ app.post('/send-email', (req, res) => {
       const { priceCOP, currencyCOP } = req.body;
       const prefix = 'sk8-';
       const uniqueReference = prefix + uuidv4();
-      const integrityKey = process.env.INTEGRITY_KEY; 
+      const integrityKey = process.env.REACT_APP_INTEGRITY_KEY; 
       const currency = currencyCOP || 'COP';
   
       const concatenatedString = `${uniqueReference}${priceCOP}${currency}${integrityKey}`;
@@ -91,5 +91,5 @@ app.post('/send-email', (req, res) => {
   });
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.REACT_APP_PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
