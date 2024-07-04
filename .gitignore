@@ -19,8 +19,6 @@
 .env.test.local
 .env.production.local
 
-# Ignorar el archivo config.js en el directorio src
-
 
 npm-debug.log*
 yarn-debug.log*
