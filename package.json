@@ -1,6 +1,7 @@
 {
   "name": "nalabusiness",
   "version": "0.1.0",
+  "main": "server.cjs",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -77,6 +78,8 @@
     ]
   },
   "devDependencies": {
+    "@vercel/node": "^3.2.1",
+    "@vercel/static-build": "^2.5.12",
     "autoprefixer": "^10.4.19",
     "esbuild": "^0.21.4",
     "postcss": "^8.4.38",
