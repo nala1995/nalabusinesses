@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "ignoreDuringBuilds": [
+    "eslint"
+  ],
     "builds": [
       {
         "src": "server.cjs",

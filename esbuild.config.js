@@ -9,7 +9,6 @@ build({
 }).catch(() => process.exit(1));
 
  module.exports = {
-    //...
     resolve: {
       extensions: ['.js', '.jsx', 'cjs', 'mjs'],
       parserOptions: {
