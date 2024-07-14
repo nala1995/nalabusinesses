@@ -3,7 +3,12 @@
   "builds": [
     { "src": "src/App.jsx", "use": "@vercel/static-build" }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "/src/App.jsx" }]
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/src/$1" },
+    { "src": "/(.*)", "dest": "/src/App.jsx" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/src/index.jsx" }
+  ]
 }
 
   
