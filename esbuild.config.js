@@ -1,11 +1,11 @@
 import { build } from 'esbuild';
 
 build({
-    entryPoints: ['./src/index.js' && './src/App.jsx'], /* entry archive */
-    outdir: './dist', /* folder where the archives will be packaging */
-    bundle: true, /* package the archives */
-    minify: true, /* minify the archives */
-    format: 'esm', /* format of the archives */
+    entryPoints: ['./src/index.js' && './src/App.jsx'], 
+    outdir: './dist', 
+    bundle: true, 
+    minify: true, 
+    format: 'esm', 
 }).catch(() => process.exit(1));
 
  module.exports = {

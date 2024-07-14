@@ -1,5 +1,0 @@
-.env
-config.js
-node_modules/
-**/*.test.js
-**/*.spec.js
