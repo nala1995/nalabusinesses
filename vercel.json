@@ -1,28 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "server.cjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "src/**/*",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
+    { "src": "src/App.jsx", "use": "@vercel/static-build" }
   ],
-  "routes": [
-    {
-      "src": "/api/.*",
-      "dest": "/server.cjs"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/$1"
-    }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "/src/App.jsx" }]
 }
 
   
