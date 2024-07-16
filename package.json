@@ -57,7 +57,8 @@
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "server": "node server.cjs",
-    "vercel-build": "CI=false npm run build"
+    "vercel-build": "CI=false npm run build",
+    "build:no-lint": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
