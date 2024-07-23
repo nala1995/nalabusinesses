@@ -10,8 +10,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "eslint": {
-    "ignoreDuringBuilds": true
-  }
+  ]
 }
