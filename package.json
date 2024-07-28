@@ -2,6 +2,7 @@
   "name": "nalabusiness",
   "version": "0.1.0",
   "main": "server.cjs",
+  "homepage":"./",
   "private": true,
   "type": "module",
   "dependencies": {
