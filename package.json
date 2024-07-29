@@ -2,7 +2,6 @@
   "name": "nalabusiness",
   "version": "0.1.0",
   "main": "server.cjs",
-  "homepage":"./",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -52,7 +51,7 @@
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
-    "build": "npm run build:css && react-scripts build && node esbuild.config.js",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
